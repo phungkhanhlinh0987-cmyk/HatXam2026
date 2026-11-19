@@ -1,0 +1,1683 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light" />
+<title>TIẾNG NHỊ CHỢ ĐỜI: Mạch ngầm của Hát Xẩm từ không gian bóng tối đến phố thị đương đại</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🎻%3C/text%3E%3C/svg%3E" />
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        crimson: { DEFAULT: '#C92A2A', bright: '#E03131', deep: '#961A1A', soft: '#FDECEC' },
+        cream: { DEFAULT: '#FFFDF5', warm: '#FBF5E6', card: '#FFFEF9' },
+        ocean: { DEFAULT: '#1864AB', mid: '#1971C2', light: '#4DABF7', pale: '#E7F5FF' },
+        ink: '#141414'
+      },
+      fontFamily: {
+        poster: ['Oswald', 'Anton', 'sans-serif'],
+        sans: ['Montserrat', 'Helvetica Neue', 'Arial', 'sans-serif']
+      }
+    }
+  }
+};
+</script>
+
+<style>
+:root {
+  --red: #C92A2A; --red-bright: #E03131; --cream: #FFFDF5; --cream-warm: #FBF5E6;
+  --blue: #1864AB; --blue-mid: #1971C2; --ink: #141414;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+html { scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 72px); color-scheme: light; }
+body::before {
+  content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px);
+  z-index: 60; background: rgba(255, 253, 245, 0.97);
+}
+body {
+  background: linear-gradient(180deg, #FFFDF5 0%, #FBF5E6 38%, #F4F9FD 72%, #FBF5E6 100%);
+  color: var(--ink);
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+.slide-heading { font-family: 'Oswald', 'Anton', sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 0.015em; line-height: 1.08; }
+#reading-progress { background: linear-gradient(90deg, #C92A2A 0%, #E03131 45%, #1971C2 80%, #1864AB 100%); transition: width 0.08s linear; }
+
+.chu-cong-horizontal {
+  height: 26px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='26' viewBox='0 0 44 26'%3E%3Crect x='4' y='3' width='20' height='20' fill='none' stroke='%23C92A2A' stroke-width='2.4'/%3E%3Crect x='9' y='8' width='10' height='10' fill='none' stroke='%231864AB' stroke-width='2'/%3E%3Cline x1='24' y1='13' x2='44' y2='13' stroke='%23C92A2A' stroke-width='2.4'/%3E%3Cline x1='0' y1='13' x2='4' y2='13' stroke='%23C92A2A' stroke-width='2.4'/%3E%3Cline x1='34' y1='5' x2='34' y2='21' stroke='%231971C2' stroke-width='2'/%3E%3C/svg%3E");
+  background-repeat: repeat-x; background-position: center;
+}
+.chu-cong-vertical-rail {
+  position: fixed; top: 64px; bottom: 0; width: 30px; pointer-events: none; z-index: 25; opacity: 0.55;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='44' viewBox='0 0 30 44'%3E%3Crect x='5' y='4' width='20' height='20' fill='none' stroke='%23C92A2A' stroke-width='2.2'/%3E%3Crect x='10' y='9' width='10' height='10' fill='none' stroke='%231864AB' stroke-width='1.8'/%3E%3Cline x1='15' y1='24' x2='15' y2='44' stroke='%23C92A2A' stroke-width='2.2'/%3E%3Cline x1='15' y1='0' x2='15' y2='4' stroke='%23C92A2A' stroke-width='2.2'/%3E%3Cline x1='7' y1='34' x2='23' y2='34' stroke='%231971C2' stroke-width='1.8'/%3E%3C/svg%3E");
+  background-repeat: repeat-y; background-position: center top;
+}
+.slide-checker-ombre {
+  background-image:
+    linear-gradient(45deg, rgba(201, 42, 42, 0.1) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(24, 100, 171, 0.1) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(201, 42, 42, 0.1) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(24, 100, 171, 0.1) 75%);
+  background-size: 32px 32px; background-position: 0 0, 0 16px, 16px -16px, -16px 0;
+}
+.hero-slide-bg {
+  background:
+    radial-gradient(circle at 14% 20%, rgba(224, 49, 49, 0.18) 0%, transparent 45%),
+    radial-gradient(circle at 86% 24%, rgba(25, 113, 194, 0.22) 0%, transparent 48%),
+    linear-gradient(175deg, #FFFDF5 0%, #FBF5E6 56%, #E7F5FF 100%);
+}
+.hue-sticker { filter: drop-shadow(0 5px 12px rgba(20, 20, 20, 0.18)); transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1); }
+.hue-sticker:hover { transform: translateY(-4px) scale(1.015); }
+
+.article-prose p { font-family: 'Montserrat', sans-serif; font-size: 1.0625rem; line-height: 1.9; margin-bottom: 1.45rem; color: #141414; font-weight: 400; }
+.sapo-drop-cap::first-letter { float: left; font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 4.3rem; line-height: 0.84; padding-right: 0.72rem; padding-top: 0.15rem; color: #C92A2A; }
+.chapter-drop-cap::first-letter { float: left; font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 3.9rem; line-height: 0.85; padding-right: 0.65rem; padding-top: 0.15rem; color: #1864AB; }
+
+@keyframes pulseRing {
+  0% { transform: translate(-50%, -50%) scale(1); box-shadow: 0 0 0 0 rgba(201, 42, 42, 0.82); }
+  70% { transform: translate(-50%, -50%) scale(1.07); box-shadow: 0 0 0 16px rgba(201, 42, 42, 0); }
+  100% { transform: translate(-50%, -50%) scale(1); box-shadow: 0 0 0 0 rgba(201, 42, 42, 0); }
+}
+.mat-hotspot { animation: pulseRing 2s infinite; transition: background-color 0.2s ease, transform 0.2s ease; }
+.mat-hotspot.is-selected { animation: none; transform: translate(-50%, -50%) scale(1.24); background-color: #1864AB !important; box-shadow: 0 0 0 5px #FFFFFF, 0 0 0 9px rgba(24, 100, 171, 0.48); }
+
+.flip-scene { perspective: 1200px; }
+.flip-card-inner { position: relative; width: 100%; transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1); transform-style: preserve-3d; }
+.flip-card-inner.is-flipped { transform: rotateY(180deg); }
+.flip-face { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+.flip-back { transform: rotateY(180deg); }
+
+body.editor-active .editable { outline: 2px dashed #1864AB; outline-offset: 4px; border-radius: 6px; background-color: rgba(231, 245, 255, 0.55); cursor: text; }
+body.editor-active .editable:focus { outline: 2px solid #C92A2A; background-color: #FFFEF9; }
+
+/* Khóa quyền chỉnh sửa: người xem không thấy công cụ của chủ trang */
+body:not(.owner-unlocked) .owner-only { display: none !important; }
+body.owner-unlocked .viewer-only { display: none !important; }
+</style>
+</head>
+
+<body class="selection:bg-crimson/20 selection:text-crimson-deep">
+
+<svg width="0" height="0" class="absolute pointer-events-none" aria-hidden="true">
+  <defs>
+    <filter id="hue-diecut" x="-18%" y="-18%" width="136%" height="136%">
+      <feMorphology in="SourceAlpha" result="DILATED" operator="dilate" radius="6.5"></feMorphology>
+      <feFlood flood-color="#FFFFFF" flood-opacity="1" result="WHITE_FILL"></feFlood>
+      <feComposite in="WHITE_FILL" in2="DILATED" operator="in" result="WHITE_OUTLINE"></feComposite>
+      <feDropShadow dx="0" dy="3" stdDeviation="2.5" flood-color="#141414" flood-opacity="0.22" result="SHADOW"/>
+      <feMerge>
+        <feMergeNode in="SHADOW"/>
+        <feMergeNode in="WHITE_OUTLINE"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="ombre-crimson-ocean" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C92A2A"/><stop offset="50%" stop-color="#E03131"/><stop offset="100%" stop-color="#1864AB"/>
+    </linearGradient>
+    <linearGradient id="ombre-cloud-fill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFDF5"/><stop offset="55%" stop-color="#F8C4C4"/><stop offset="100%" stop-color="#C92A2A"/>
+    </linearGradient>
+    <linearGradient id="ombre-cloud-blue" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFDF5"/><stop offset="55%" stop-color="#BAE0FF"/><stop offset="100%" stop-color="#1864AB"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<div class="chu-cong-vertical-rail left-1 hidden xl:block" aria-hidden="true"></div>
+<div class="chu-cong-vertical-rail right-1 hidden xl:block" aria-hidden="true"></div>
+
+<!-- ================= STICKY NAVIGATION BAR ================= -->
+<header class="sticky z-50 bg-cream/95 backdrop-blur-md border-b-2 border-crimson/25 shadow-sm" style="top: env(safe-area-inset-top, 0px);">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 h-16 flex items-center justify-between gap-2">
+    <a href="#anh-bia" class="flex items-center gap-2.5 group shrink-0">
+      <span class="w-9 h-9 rounded-xl bg-gradient-to-br from-crimson to-ocean flex items-center justify-center text-cream font-poster font-bold text-lg border-2 border-ink shadow-sm">X</span>
+      <span class="slide-heading text-xl sm:text-2xl text-ink group-hover:text-crimson transition-colors">MỘT CHIẾU XẨM</span>
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-0.5 font-sans text-xs xl:text-sm font-semibold text-ink/85" aria-label="Mục lục bài báo">
+      <a href="#sapo-bai-bao" class="px-2.5 py-1.5 rounded-lg hover:bg-crimson/10 hover:text-crimson transition">Mở đầu</a>
+      <a href="#chuong-1" class="px-2.5 py-1.5 rounded-lg hover:bg-crimson/10 hover:text-crimson transition">Chương I</a>
+      <a href="#chuong-2" class="px-2.5 py-1.5 rounded-lg hover:bg-crimson/10 hover:text-crimson transition">Chương II</a>
+      <a href="#chuong-3" class="px-2.5 py-1.5 rounded-lg hover:bg-crimson/10 hover:text-crimson transition">Chương III</a>
+      <a href="#chuong-4" class="px-2.5 py-1.5 rounded-lg hover:bg-crimson/10 hover:text-crimson transition">Chương IV</a>
+      <a href="#podcast" class="px-2.5 py-1.5 rounded-lg hover:bg-ocean/10 hover:text-ocean transition">Podcast</a>
+      <a href="#vi-thanh" class="px-2.5 py-1.5 rounded-lg hover:bg-crimson/10 hover:text-crimson transition">Vĩ thanh</a>
+    </nav>
+
+    <div class="flex items-center gap-1.5 sm:gap-2">
+      <button id="lock-btn" type="button" onclick="onLockClick()" title="Khóa / mở khóa quyền chỉnh sửa"
+        class="font-sans text-xs font-bold px-3 py-2 rounded-xl border-2 border-ink/25 text-ink bg-white hover:bg-cream-warm transition flex items-center gap-1 shadow-sm cursor-pointer">
+        <span id="lock-icon">🔒</span><span id="lock-label" class="hidden sm:inline">Mở khóa</span>
+      </button>
+      <button id="toggle-editor-btn" type="button" onclick="toggleEditorMode()"
+        class="owner-only font-sans text-xs font-bold px-3 py-2 rounded-xl border-2 border-ocean text-ocean bg-ocean-pale/80 hover:bg-ocean hover:text-white transition flex items-center gap-1 shadow-sm cursor-pointer">
+        <span>✏️</span><span id="editor-btn-label">Chỉnh sửa trực tiếp</span>
+      </button>
+      <button type="button" onclick="exportCompleteHTML()"
+        class="owner-only hidden sm:flex font-sans text-xs font-bold px-3 py-2 rounded-xl border-2 border-crimson bg-crimson text-cream hover:bg-crimson-deep transition items-center gap-1 shadow-sm cursor-pointer">
+        <span>💾</span><span>Xuất file HTML hoàn chỉnh</span>
+      </button>
+      <button type="button" onclick="toggleMobileMenu()" aria-label="Mở menu"
+        class="lg:hidden p-2 rounded-xl border-2 border-ink/20 text-ink hover:bg-crimson/10 transition">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="hidden lg:hidden bg-cream border-t border-crimson/20 px-4 py-3 font-sans text-sm shadow-md">
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+      <a href="#sapo-bai-bao" onclick="toggleMobileMenu(false)" class="px-3 py-2 rounded-lg bg-cream-warm text-ink font-semibold">Mở đầu</a>
+      <a href="#chuong-1" onclick="toggleMobileMenu(false)" class="px-3 py-2 rounded-lg bg-cream-warm text-ink font-semibold">Chương I</a>
+      <a href="#chuong-2" onclick="toggleMobileMenu(false)" class="px-3 py-2 rounded-lg bg-cream-warm text-ink font-semibold">Chương II</a>
+      <a href="#chuong-3" onclick="toggleMobileMenu(false)" class="px-3 py-2 rounded-lg bg-cream-warm text-ink font-semibold">Chương III</a>
+      <a href="#chuong-4" onclick="toggleMobileMenu(false)" class="px-3 py-2 rounded-lg bg-cream-warm text-ink font-semibold">Chương IV</a>
+      <a href="#podcast" onclick="toggleMobileMenu(false)" class="px-3 py-2 rounded-lg bg-ocean-pale text-ocean font-bold">Podcast</a>
+      <a href="#vi-thanh" onclick="toggleMobileMenu(false)" class="px-3 py-2 rounded-lg bg-cream-warm text-ink font-semibold">Vĩ thanh</a>
+      <button type="button" onclick="exportCompleteHTML(); toggleMobileMenu(false)" class="owner-only px-3 py-2 rounded-lg bg-crimson text-cream font-bold text-left">💾 Xuất file HTML</button>
+    </div>
+  </div>
+
+  <div class="w-full h-1.5 bg-cream-warm"><div id="reading-progress" class="h-full w-0"></div></div>
+</header>
+
+<!-- ================= 1. ẢNH BÌA ================= -->
+<section id="anh-bia" class="relative hero-slide-bg border-b-2 border-ink/20 overflow-hidden">
+  <div class="chu-cong-horizontal w-full" aria-hidden="true"></div>
+
+  <div class="max-w-6xl mx-auto px-4 sm:px-8 pt-8 sm:pt-12 pb-2 text-center relative z-10">
+    <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-5 mb-4">
+      <span class="editable font-sans text-xs sm:text-sm font-bold uppercase tracking-[0.16em] text-crimson bg-crimson-soft/90 px-3.5 py-1 rounded-full border border-crimson/30" data-key="hero-sub-badge">
+        Loạt bài đa phương tiện: Một chiếu Xẩm, ba lớp nghệ thuật
+      </span>
+    </div>
+    <h1 class="editable slide-heading text-4xl sm:text-6xl md:text-[70px] text-ink max-w-5xl mx-auto mb-3" data-key="hero-title">
+      <span class="text-ink">TIẾNG NHỊ CHỢ ĐỜI</span>
+      <span class="block sm:inline text-crimson"> : MẠCH NGẦM CỦA HÁT XẨM</span>
+    </h1>
+    <p class="editable font-sans text-base sm:text-xl font-bold text-ocean uppercase tracking-wider max-w-3xl mx-auto" data-key="hero-subtitle">
+      Từ không gian bóng tối đến phố thị đương đại • Loạt bài đa phương tiện: Một chiếu Xẩm, ba lớp nghệ thuật
+    </p>
+  </div>
+
+  <div class="max-w-6xl mx-auto px-2 sm:px-6 pt-3 pb-0 relative z-10">
+    <svg viewBox="0 0 1200 470" class="w-full h-auto block" role="img" aria-label="Đoàn nghệ nhân Hát Xẩm biểu diễn trên nền phố cổ, chiếu cói và mây vần dân gian">
+      <g fill="#C92A2A" opacity="0.13">
+        <rect x="240" y="34" width="230" height="14" rx="7"/><rect x="310" y="56" width="140" height="12" rx="6"/>
+        <rect x="730" y="42" width="240" height="14" rx="7"/><rect x="780" y="64" width="150" height="12" rx="6"/>
+      </g>
+
+      <g stroke="#141414" stroke-width="2" stroke-linejoin="round">
+        <g transform="translate(65, 110)">
+          <path d="M-12 52 Q35 66 85 26 H295 Q345 66 392 52 Q350 82 295 72 H85 Q30 82 -12 52 Z" fill="url(#ombre-crimson-ocean)"/>
+          <path d="M92 26 C102 8 128 8 138 26 C152 10 182 10 194 26 C206 10 236 10 248 26 C258 8 284 8 292 26 Z" fill="#4DABF7"/>
+          <rect x="26" y="72" width="328" height="235" fill="#FFFDF5"/>
+          <rect x="14" y="72" width="14" height="240" fill="#1971C2"/>
+          <rect x="352" y="72" width="14" height="240" fill="#1971C2"/>
+          <g fill="none" stroke="#C92A2A" stroke-width="6">
+            <rect x="44" y="88" width="88" height="92"/><rect x="146" y="88" width="88" height="92"/><rect x="248" y="88" width="88" height="92"/>
+            <rect x="44" y="196" width="88" height="92"/><rect x="146" y="196" width="88" height="92"/><rect x="248" y="196" width="88" height="92"/>
+          </g>
+          <g fill="none" stroke="#1864AB" stroke-width="4">
+            <rect x="64" y="108" width="48" height="52"/><rect x="166" y="108" width="48" height="52"/><rect x="268" y="108" width="48" height="52"/>
+            <rect x="64" y="216" width="48" height="52"/><rect x="166" y="216" width="48" height="52"/><rect x="268" y="216" width="48" height="52"/>
+          </g>
+        </g>
+
+        <g transform="translate(755, 110)">
+          <path d="M-12 52 Q35 66 85 26 H295 Q345 66 392 52 Q350 82 295 72 H85 Q30 82 -12 52 Z" fill="url(#ombre-crimson-ocean)"/>
+          <path d="M92 26 C102 8 128 8 138 26 C152 10 182 10 194 26 C206 10 236 10 248 26 C258 8 284 8 292 26 Z" fill="#4DABF7"/>
+          <rect x="26" y="72" width="328" height="235" fill="#FFFDF5"/>
+          <rect x="14" y="72" width="14" height="240" fill="#1971C2"/>
+          <rect x="352" y="72" width="14" height="240" fill="#1971C2"/>
+          <g fill="none" stroke="#C92A2A" stroke-width="6">
+            <rect x="44" y="88" width="88" height="92"/><rect x="146" y="88" width="88" height="92"/><rect x="248" y="88" width="88" height="92"/>
+            <rect x="44" y="196" width="88" height="92"/><rect x="146" y="196" width="88" height="92"/><rect x="248" y="196" width="88" height="92"/>
+          </g>
+          <g fill="none" stroke="#1864AB" stroke-width="4">
+            <rect x="64" y="108" width="48" height="52"/><rect x="166" y="108" width="48" height="52"/><rect x="268" y="108" width="48" height="52"/>
+            <rect x="64" y="216" width="48" height="52"/><rect x="166" y="216" width="48" height="52"/><rect x="268" y="216" width="48" height="52"/>
+          </g>
+        </g>
+      </g>
+
+      <g opacity="0.22">
+        <g fill="#C92A2A">
+          <rect x="0" y="348" width="28" height="28"/><rect x="56" y="348" width="28" height="28"/><rect x="112" y="348" width="28" height="28"/><rect x="168" y="348" width="28" height="28"/><rect x="224" y="348" width="28" height="28"/><rect x="280" y="348" width="28" height="28"/><rect x="336" y="348" width="28" height="28"/><rect x="392" y="348" width="28" height="28"/><rect x="448" y="348" width="28" height="28"/><rect x="504" y="348" width="28" height="28"/><rect x="560" y="348" width="28" height="28"/>
+          <rect x="28" y="376" width="28" height="28"/><rect x="84" y="376" width="28" height="28"/><rect x="140" y="376" width="28" height="28"/><rect x="196" y="376" width="28" height="28"/><rect x="252" y="376" width="28" height="28"/><rect x="308" y="376" width="28" height="28"/><rect x="364" y="376" width="28" height="28"/><rect x="420" y="376" width="28" height="28"/><rect x="476" y="376" width="28" height="28"/><rect x="532" y="376" width="28" height="28"/>
+        </g>
+        <g fill="#1864AB">
+          <rect x="616" y="348" width="28" height="28"/><rect x="672" y="348" width="28" height="28"/><rect x="728" y="348" width="28" height="28"/><rect x="784" y="348" width="28" height="28"/><rect x="840" y="348" width="28" height="28"/><rect x="896" y="348" width="28" height="28"/><rect x="952" y="348" width="28" height="28"/><rect x="1008" y="348" width="28" height="28"/><rect x="1064" y="348" width="28" height="28"/><rect x="1120" y="348" width="28" height="28"/><rect x="1176" y="348" width="28" height="28"/>
+          <rect x="588" y="376" width="28" height="28"/><rect x="644" y="376" width="28" height="28"/><rect x="700" y="376" width="28" height="28"/><rect x="756" y="376" width="28" height="28"/><rect x="812" y="376" width="28" height="28"/><rect x="868" y="376" width="28" height="28"/><rect x="924" y="376" width="28" height="28"/><rect x="980" y="376" width="28" height="28"/><rect x="1036" y="376" width="28" height="28"/><rect x="1092" y="376" width="28" height="28"/><rect x="1148" y="376" width="28" height="28"/>
+        </g>
+      </g>
+
+      <polygon points="315,418 885,418 835,362 365,362" fill="#FBF5E6" stroke="#C92A2A" stroke-width="9"/>
+
+      <g transform="translate(175, 165)" filter="url(#hue-diecut)">
+        <path d="M56 175 L46 245 L118 245 L108 175 Z" fill="#141414" stroke="#141414" stroke-width="2.2"/>
+        <path d="M62 76 C36 86 24 148 16 206 C46 218 118 218 148 206 C140 148 128 86 102 76 Z" fill="#FFFDF5" stroke="#141414" stroke-width="2.3"/>
+        <path d="M68 82 L60 208 M96 82 L104 208" fill="none" stroke="#141414" stroke-width="1.6"/>
+        <path d="M54 84 L20 112 L42 132 L64 106" fill="#FFFDF5" stroke="#141414" stroke-width="2.2"/>
+        <path d="M110 84 L144 112 L122 132 L100 106" fill="#FFFDF5" stroke="#141414" stroke-width="2.2"/>
+        <rect x="8" y="96" width="34" height="9" rx="2" transform="rotate(-25 25 100)" fill="#C92A2A" stroke="#141414" stroke-width="2"/>
+        <rect x="122" y="96" width="34" height="9" rx="2" transform="rotate(25 139 100)" fill="#C92A2A" stroke="#141414" stroke-width="2"/>
+        <circle cx="82" cy="46" r="22" fill="#FFFDF5" stroke="#141414" stroke-width="2.3"/>
+        <circle cx="82" cy="48" r="16" fill="#FFFDF5" stroke="#141414" stroke-width="2"/>
+        <path d="M74 47 Q77 45 80 47 M85 47 Q88 45 91 47" fill="none" stroke="#141414" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="M79 56 Q82 59 86 56" fill="none" stroke="#141414" stroke-width="1.6" stroke-linecap="round"/>
+        <ellipse cx="64" cy="248" rx="14" ry="6" fill="#141414"/><ellipse cx="102" cy="248" rx="14" ry="6" fill="#141414"/>
+      </g>
+
+      <g transform="translate(365, 208)" filter="url(#hue-diecut)">
+        <path d="M46 66 C22 76 12 128 16 172 C42 184 96 184 118 172 C122 128 110 76 86 66 Z" fill="#C92A2A" stroke="#141414" stroke-width="2.3"/>
+        <path d="M36 88 C24 112 28 134 48 136 M96 88 C108 112 104 134 84 136" fill="none" stroke="#141414" stroke-width="1.8"/>
+        <circle cx="66" cy="40" r="18" fill="#FFFDF5" stroke="#141414" stroke-width="2.3"/>
+        <path d="M47 34 Q66 16 85 34 L82 26 Q66 14 50 26 Z" fill="#141414" stroke="#141414" stroke-width="1.8"/>
+        <path d="M48 31 Q66 20 84 31" fill="none" stroke="#C92A2A" stroke-width="3"/>
+        <path d="M59 40 Q62 38 65 40 M69 40 Q72 38 75 40" fill="none" stroke="#141414" stroke-width="1.6"/>
+        <path d="M64 49 Q67 51 70 49" fill="none" stroke="#141414" stroke-width="1.6"/>
+        <ellipse cx="66" cy="134" rx="26" ry="11" fill="#FFFDF5" stroke="#141414" stroke-width="2.2"/>
+        <path d="M40 134 V147 A26 11 0 0 0 92 147 V134" fill="#FFFDF5" stroke="#141414" stroke-width="2.2"/>
+        <path d="M42 138 L54 150 L66 138 L78 150 L90 138" fill="none" stroke="#141414" stroke-width="1.5"/>
+        <line x1="88" y1="106" x2="68" y2="132" stroke="#141414" stroke-width="2.6" stroke-linecap="round"/>
+      </g>
+
+      <g transform="translate(525, 148)" filter="url(#hue-diecut)">
+        <rect x="46" y="218" width="56" height="42" fill="#141414" stroke="#141414" stroke-width="2"/>
+        <ellipse cx="56" cy="262" rx="16" ry="6" fill="#141414"/><ellipse cx="94" cy="262" rx="16" ry="6" fill="#141414"/>
+        <path d="M52 72 C34 80 28 156 26 226 C52 234 98 234 122 226 C120 156 114 80 96 72 Z" fill="#FFFDF5" stroke="#141414" stroke-width="2.4"/>
+        <path d="M62 74 L74 92 L86 74 M74 92 V228" fill="none" stroke="#141414" stroke-width="1.8"/>
+        <circle cx="74" cy="44" r="20" fill="#FFFDF5" stroke="#141414" stroke-width="2.4"/>
+        <path d="M53 36 Q74 16 95 36 Q82 24 74 24 Q66 24 53 36 Z" fill="#141414"/>
+        <rect x="58" y="39" width="13" height="8" rx="2.5" fill="#141414"/><rect x="77" y="39" width="13" height="8" rx="2.5" fill="#141414"/>
+        <line x1="71" y1="43" x2="77" y2="43" stroke="#141414" stroke-width="2"/>
+        <path d="M69 54 Q74 58 79 54" fill="none" stroke="#141414" stroke-width="1.7"/>
+        <line x1="94" y1="30" x2="90" y2="176" stroke="#C92A2A" stroke-width="5.5" stroke-linecap="round"/>
+        <line x1="94" y1="30" x2="90" y2="176" stroke="#141414" stroke-width="1.6"/>
+        <line x1="93" y1="44" x2="114" y2="40" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+        <line x1="92" y1="54" x2="112" y2="50" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+        <rect x="78" y="148" width="24" height="22" rx="4" fill="#C92A2A" stroke="#141414" stroke-width="2.2"/>
+        <path d="M36 146 Q80 132 132 148" fill="none" stroke="#141414" stroke-width="3"/>
+        <line x1="38" y1="147" x2="130" y2="149" stroke="#C92A2A" stroke-width="1.5"/>
+      </g>
+
+      <g transform="translate(690, 210)" filter="url(#hue-diecut)">
+        <path d="M48 64 C24 74 14 126 18 170 C44 182 96 182 118 170 C122 126 110 74 86 64 Z" fill="#FFFDF5" stroke="#141414" stroke-width="2.3"/>
+        <circle cx="67" cy="39" r="18" fill="#FFFDF5" stroke="#141414" stroke-width="2.3"/>
+        <path d="M48 33 Q67 16 86 33 Q76 23 67 23 Q58 23 48 33 Z" fill="#141414"/>
+        <path d="M60 39 Q63 37 66 39 M70 39 Q73 37 76 39" fill="none" stroke="#141414" stroke-width="1.6"/>
+        <rect x="-4" y="136" width="144" height="17" rx="4" transform="rotate(-14 68 144)" fill="#C92A2A" stroke="#141414" stroke-width="2.2"/>
+        <path d="M6 154 Q-4 112 14 96" fill="none" stroke="#141414" stroke-width="3.2" stroke-linecap="round"/>
+        <path d="M-2 124 C-14 116 -14 142 -2 138 C8 140 12 120 -2 124 Z" fill="#1971C2" stroke="#141414" stroke-width="2"/>
+        <line x1="12" y1="100" x2="128" y2="126" stroke="#141414" stroke-width="1.5"/>
+      </g>
+
+      <g transform="translate(865, 162)" filter="url(#hue-diecut)">
+        <path d="M52 178 L42 246 L112 246 L102 178 Z" fill="#141414" stroke="#141414" stroke-width="2.2"/>
+        <path d="M58 76 C32 88 22 148 14 208 C46 220 114 220 144 208 C134 148 122 88 96 76 Z" fill="#C92A2A" stroke="#141414" stroke-width="2.3"/>
+        <path d="M64 82 L56 210 M90 82 L98 210" fill="none" stroke="#141414" stroke-width="1.6"/>
+        <circle cx="77" cy="46" r="22" fill="#1864AB" stroke="#141414" stroke-width="2.3"/>
+        <circle cx="77" cy="48" r="16" fill="#FFFDF5" stroke="#141414" stroke-width="2"/>
+        <path d="M69 47 Q72 45 75 47 M80 47 Q83 45 86 47" fill="none" stroke="#141414" stroke-width="1.6"/>
+        <path d="M74 56 Q77 59 81 56" fill="none" stroke="#141414" stroke-width="1.6"/>
+        <path d="M98 118 L136 86 L154 134 Z" fill="#FFFDF5" stroke="#141414" stroke-width="2.2"/>
+        <path d="M114 124 Q134 114 144 102" fill="none" stroke="#1864AB" stroke-width="2"/>
+        <ellipse cx="60" cy="249" rx="14" ry="6" fill="#141414"/><ellipse cx="96" cy="249" rx="14" ry="6" fill="#141414"/>
+      </g>
+
+      <g stroke="#141414" stroke-width="2.4" stroke-linejoin="round">
+        <path d="M-10 475 V415 C16 392 54 396 72 420 C96 386 156 386 180 422 C204 404 246 408 264 436 C288 420 326 432 338 475 Z" fill="url(#ombre-cloud-fill)"/>
+        <path d="M108 428 C108 410 132 406 138 420 C142 430 130 442 120 435" fill="none" stroke="#141414" stroke-width="2.3" stroke-linecap="round"/>
+        <path d="M26 436 C26 420 46 416 52 428 C56 436 46 446 38 440" fill="none" stroke="#141414" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M1210 475 V412 C1180 388 1140 394 1122 420 C1096 384 1034 386 1010 422 C986 404 946 410 928 438 C904 422 868 434 854 475 Z" fill="url(#ombre-cloud-blue)"/>
+        <path d="M1082 428 C1082 410 1058 406 1052 420 C1048 430 1060 442 1070 435" fill="none" stroke="#141414" stroke-width="2.3" stroke-linecap="round"/>
+        <path d="M1164 436 C1164 420 1144 416 1138 428 C1134 436 1144 446 1152 440" fill="none" stroke="#141414" stroke-width="2.2" stroke-linecap="round"/>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<!-- ================= 2. SAPO ================= -->
+<section id="sapo-bai-bao" class="pt-12 sm:pt-16 pb-6">
+  <div class="max-w-[760px] mx-auto px-5 sm:px-6">
+    <div class="relative bg-cream-card border-2 border-ink/15 border-l-[6px] border-l-crimson rounded-2xl p-6 sm:p-9 shadow-md">
+      <div class="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-ink/10 font-sans">
+        <span class="text-xs font-bold uppercase tracking-[0.18em] text-crimson">Sapo • Phóng sự Longform</span>
+        <span class="text-xs font-semibold text-ocean">Hà Nội • Ninh Bình • Đương đại</span>
+      </div>
+      <p class="editable sapo-drop-cap font-sans text-base sm:text-[18.5px] leading-[1.88] text-ink font-medium" data-key="hero-sapo">
+        Tối cuối tuần bên khu vực chợ Đồng Xuân và phố đi bộ Hồ Gươm (Hà Nội), giữa tiếng loa phố thị và dòng người đi dạo, một tấm chiếu hoa cạp điều được trải xuống nền gạch. Chỉ cần tiếng đàn nhị cất lên cùng nhịp sênh tiền giòn giã, không gian ồn ã xung quanh như chậm lại một nhịp. Từng là sinh kế của những người khiếm thị hát rong nơi góc chợ, bến đò, Hát Xẩm hôm nay đã bước sang vị thế di sản văn hóa. Nhưng đằng sau những buổi diễn cuối tuần và các bản phối điện tử triệu lượt nghe, điều gì giúp loại hình diễn xướng này vẫn giữ được nhịp thở giữa đời sống đương đại?
+      </p>
+    </div>
+  </div>
+</section>
+
+<main class="relative z-10">
+
+<!-- ==================== CHƯƠNG I ==================== -->
+<article id="chuong-1" class="pt-12 sm:pt-16 pb-12">
+  <div class="max-w-[760px] mx-auto px-5 sm:px-6">
+    <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-8">
+      <div class="relative w-16 h-16 shrink-0 flex items-center justify-center">
+        <svg viewBox="0 0 100 100" class="w-full h-full drop-shadow-sm" aria-hidden="true"><polygon points="50,2 60,18 79,11 79,31 97,41 85,57 93,76 74,79 66,97 50,86 34,97 26,79 7,76 15,57 3,41 21,31 21,11 40,18" fill="#C92A2A" stroke="#141414" stroke-width="2.4"/></svg>
+        <span class="absolute slide-heading text-2xl text-cream">01</span>
+      </div>
+      <div>
+        <p class="font-sans text-xs font-bold uppercase tracking-[0.2em] text-ocean mb-1">Chương I</p>
+        <h2 class="editable slide-heading text-3xl sm:text-4xl text-ink" data-key="c1-title">
+          ĐÔI MẮT TRÊN ĐẦU NGÓN TAY VÀ <span class="text-crimson">“TỜ BÁO NÓI” GIỮA CHỢ ĐỜI</span>
+        </h2>
+      </div>
+    </div>
+
+    <div class="article-prose">
+      <p class="editable chapter-drop-cap" data-key="c1-p1">
+        Nếu nhắm mắt lại vài phút giữa khu phố cổ Hà Nội buổi tối, nhịp sống đô thị hiện ra bằng một bản đồ âm thanh dày đặc: tiếng rao hàng, tiếng bước chân, tiếng trò chuyện ven vỉa hè xen lẫn nhạc điện tử từ các hàng quán. Cách cảm nhận thế giới bằng thính giác ấy từng là điều kiện sống còn của những người tạo nên Hát Xẩm — loại hình diễn xướng dân gian gắn với đời sống bình dân vùng đồng bằng và trung du Bắc Bộ.
+      </p>
+      <p class="editable" data-key="c1-p2">
+        Theo truyền thuyết dân gian lưu truyền trong giới nghề, nguồn gốc Hát Xẩm gắn với tích Hoàng tử Trần Quốc Đĩnh thời nhà Trần (thế kỷ XIV) ở vùng châu thổ sông Hồng và cố đô Hoa Lư, Ninh Bình. Bị hãm hại làm mù hai mắt rồi bỏ lại giữa rừng sâu, ông đã lắng nghe âm thanh của tự nhiên, tự tạo nhạc cụ dây đầu tiên và truyền dạy nghề hát cho những người khiếm thị nghèo khổ, từ đó được các thế hệ nghệ nhân tôn làm Đức Thánh Tổ nghề Hát Xẩm.
+      </p>
+      <p class="editable" data-key="c1-p3">
+        Trong đời thực, nhiều thế hệ nghệ nhân Xẩm là người nghèo hoặc người khiếm thị, mưu sinh bằng tiếng đàn, lời ca tại góc chợ, bến đò, sân ga và trên những chuyến tàu điện. Không ít gánh Xẩm được lập nên từ chính các thành viên trong một gia đình: người hát chính, người đệm đàn, người gõ nhịp, con cái theo cha mẹ vừa phụ giúp vừa học nghề.
+      </p>
+      <p class="editable" data-key="c1-p4">
+        Nhìn Xẩm đơn thuần qua lăng kính thương cảm là cách tiếp cận chưa đầy đủ. Với những nghệ nhân khiếm thị xưa, sự hạn chế về thị giác thúc đẩy khả năng thính giác và trí nhớ phát triển ở mức cao. Họ nhận biết nhịp sinh hoạt, tâm trạng người qua đường qua bước chân và giọng nói để chọn làn điệu phù hợp. Khi chưa có báo chí hiện đại hay mạng xã hội, các gánh Xẩm rong đóng vai trò gần như một kênh truyền thông truyền miệng của tầng lớp bình dân: chuyện hiếu nghĩa gia đình trong <em>Xẩm thập ân</em>, nỗi niềm chia xa trong <em>Anh Khóa</em>, hay thói kiêu căng, trọc phú trong <em>Mục hạ vô nhân</em> đều được chuyển tải bằng vần điệu dễ nhớ, dễ lan truyền khắp các phiên chợ Bắc Bộ cho đến các tuyến tàu điện Hà Nội thế kỷ XX.
+      </p>
+    </div>
+  </div>
+
+  <!-- ===== TƯƠNG TÁC 1: DÒNG THỜI GIAN 3 MỐC ===== -->
+  <section class="max-w-5xl mx-auto px-4 sm:px-6 mt-12">
+    <div class="rounded-3xl border-2 border-ink bg-gradient-to-br from-cream-card via-cream-warm/85 to-ocean-pale/80 p-5 sm:p-8 shadow-lg">
+      <div class="flex flex-wrap items-center justify-between gap-3 mb-6">
+        <div>
+          <span class="inline-block font-sans text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-crimson text-cream mb-2">Tương tác 01 • Dòng thời gian các mốc lịch sử</span>
+          <h3 class="editable slide-heading text-2xl sm:text-3xl text-ink" data-key="i1-title">
+            Từ truyền thuyết Tổ nghề đến <span class="text-ocean">tiếng nhị tàu điện</span>
+          </h3>
+        </div>
+        <span class="font-sans text-xs sm:text-sm font-semibold text-ocean">Bấm từng mốc để xem chi tiết</span>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6" role="tablist">
+        <button type="button" onclick="selectTimeline(0)" id="tl-tab-0" class="tl-tab text-left p-4 rounded-2xl border-2 border-ink bg-crimson text-cream shadow-md transition cursor-pointer">
+          <div class="font-sans text-xs font-bold uppercase opacity-90">Mốc 1 • Thế kỷ XIV</div>
+          <div class="slide-heading text-xl mt-0.5">Truyền thuyết Tổ nghề</div>
+        </button>
+        <button type="button" onclick="selectTimeline(1)" id="tl-tab-1" class="tl-tab text-left p-4 rounded-2xl border-2 border-ink/20 bg-white text-ink hover:border-ocean transition cursor-pointer">
+          <div class="font-sans text-xs font-bold uppercase text-ocean">Mốc 2 • Đồng bằng Bắc Bộ</div>
+          <div class="slide-heading text-xl mt-0.5">Xẩm Chợ Quê</div>
+        </button>
+        <button type="button" onclick="selectTimeline(2)" id="tl-tab-2" class="tl-tab text-left p-4 rounded-2xl border-2 border-ink/20 bg-white text-ink hover:border-ocean transition cursor-pointer">
+          <div class="font-sans text-xs font-bold uppercase text-ocean">Mốc 3 • Thế kỷ XX – 2006</div>
+          <div class="slide-heading text-xl mt-0.5">Xẩm Tàu Điện &amp; Đồng Xuân</div>
+        </button>
+      </div>
+
+      <div class="bg-cream-card rounded-2xl border-2 border-ink/20 p-5 sm:p-7">
+        <div id="tl-panel-0" class="tl-panel grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+          <div class="md:col-span-4 flex justify-center">
+            <svg viewBox="0 0 220 200" class="w-48 h-44 hue-sticker" aria-label="Minh họa Hoàng tử Trần Quốc Đĩnh">
+              <g filter="url(#hue-diecut)">
+                <circle cx="110" cy="100" r="76" fill="#FBF5E6" stroke="#C92A2A" stroke-width="2.5" stroke-dasharray="6 4"/>
+                <path d="M40 142 L72 95 L102 142 Z" fill="#4DABF7" stroke="#141414" stroke-width="2"/>
+                <path d="M112 142 L148 86 L180 142 Z" fill="#1864AB" stroke="#141414" stroke-width="2"/>
+                <path d="M84 166 C86 128 96 106 110 106 C124 106 134 128 136 166 Z" fill="#C92A2A" stroke="#141414" stroke-width="2.3"/>
+                <circle cx="110" cy="78" r="18" fill="#FFFDF5" stroke="#141414" stroke-width="2.3"/>
+                <path d="M92 70 Q110 48 128 70 Z" fill="#1864AB" stroke="#141414" stroke-width="2.2"/>
+                <line x1="128" y1="68" x2="124" y2="156" stroke="#141414" stroke-width="4" stroke-linecap="round"/>
+                <circle cx="124" cy="144" r="11" fill="#FFFDF5" stroke="#141414" stroke-width="2.2"/>
+              </g>
+            </svg>
+          </div>
+          <div class="md:col-span-8">
+            <span class="font-sans text-xs font-bold uppercase tracking-wider text-crimson">Cố đô Hoa Lư • Châu thổ sông Hồng</span>
+            <h4 class="editable slide-heading text-2xl text-ink mt-1 mb-3" data-key="tl0-title">Truyền thuyết Tổ nghề thế kỷ XIV &amp; không gian diễn xướng sơ khai</h4>
+            <p class="editable font-sans text-sm sm:text-base leading-relaxed text-ink/90" data-key="tl0-desc">
+              Tương truyền dưới triều Trần, Hoàng tử Trần Quốc Đĩnh bị hãm hại làm mù hai mắt và bỏ giữa rừng sâu vùng Hoa Lư (Ninh Bình). Ông lắng nghe tiếng gió, tiếng chim rừng, tự sáng chế nhạc cụ dây và truyền dạy lối ca hát cho người nghèo khiếm thị kiếm sống. Từ những chiếu cói sơ khai nơi gốc đa, bến đò, nghề Xẩm chính thức hình thành và tôn ông làm Đức Thánh Tổ.
+            </p>
+          </div>
+        </div>
+
+        <div id="tl-panel-1" class="tl-panel hidden grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+          <div class="md:col-span-4 flex justify-center">
+            <svg viewBox="0 0 220 200" class="w-48 h-44 hue-sticker" aria-label="Minh họa Xẩm chợ quê">
+              <g filter="url(#hue-diecut)">
+                <circle cx="110" cy="100" r="76" fill="#FFFDF5" stroke="#1864AB" stroke-width="2.5" stroke-dasharray="6 4"/>
+                <polygon points="40,152 180,152 162,116 58,116" fill="#FBF5E6" stroke="#C92A2A" stroke-width="6"/>
+                <path d="M56 132 L78 112 L100 132 Z" fill="#FFFDF5" stroke="#141414" stroke-width="2.2"/>
+                <ellipse cx="142" cy="134" rx="22" ry="8" fill="#C92A2A" stroke="#141414" stroke-width="2"/>
+                <line x1="88" y1="54" x2="128" y2="128" stroke="#141414" stroke-width="4.5" stroke-linecap="round"/>
+                <rect x="116" y="116" width="20" height="18" rx="3" fill="#C92A2A" stroke="#141414" stroke-width="2"/>
+              </g>
+            </svg>
+          </div>
+          <div class="md:col-span-8">
+            <span class="font-sans text-xs font-bold uppercase tracking-wider text-crimson">Ninh Bình • Nam Định • Thái Bình • Hải Phòng</span>
+            <h4 class="editable slide-heading text-2xl text-ink mt-1 mb-3" data-key="tl1-title">Chợ quê Bắc Bộ — Nhịp khoan thai, luyến láy tự sự</h4>
+            <p class="editable font-sans text-sm sm:text-base leading-relaxed text-ink/90" data-key="tl1-desc">
+              Tại các phiên chợ quê châu thổ sông Hồng, Xẩm vang lên với tiết tấu khoan thai, giàu sắc thái tự sự và răn dạy đạo lý. Tiếng đàn nhị réo rắt nâng đỡ câu hát chậm rãi, sâu lắng từ các nghệ nhân xưa.
+            </p>
+          </div>
+        </div>
+
+        <div id="tl-panel-2" class="tl-panel hidden grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+          <div class="md:col-span-4 flex justify-center">
+            <svg viewBox="0 0 220 200" class="w-48 h-44 hue-sticker" aria-label="Minh họa Tàu điện leng keng Hà Nội">
+              <g filter="url(#hue-diecut)">
+                <circle cx="110" cy="100" r="76" fill="#E7F5FF" stroke="#C92A2A" stroke-width="2.5" stroke-dasharray="6 4"/>
+                <line x1="42" y1="52" x2="178" y2="52" stroke="#141414" stroke-width="2" stroke-dasharray="4 3"/>
+                <line x1="110" y1="74" x2="132" y2="52" stroke="#141414" stroke-width="3"/>
+                <rect x="44" y="74" width="132" height="68" rx="12" fill="#C92A2A" stroke="#141414" stroke-width="2.4"/>
+                <rect x="44" y="74" width="132" height="32" rx="10" fill="#FFFDF5" stroke="#141414" stroke-width="2.2"/>
+                <rect x="56" y="82" width="28" height="20" rx="3" fill="#4DABF7" stroke="#141414" stroke-width="1.8"/>
+                <rect x="94" y="82" width="28" height="20" rx="3" fill="#4DABF7" stroke="#141414" stroke-width="1.8"/>
+                <rect x="132" y="82" width="32" height="20" rx="3" fill="#1864AB" stroke="#141414" stroke-width="1.8"/>
+                <circle cx="74" cy="146" r="9" fill="#141414"/><circle cx="146" cy="146" r="9" fill="#141414"/>
+              </g>
+            </svg>
+          </div>
+          <div class="md:col-span-8">
+            <span class="font-sans text-xs font-bold uppercase tracking-wider text-ocean">Hà Nội thế kỷ XX • Chiếu Xẩm Chợ Đồng Xuân (từ 2006)</span>
+            <h4 class="editable slide-heading text-2xl text-ink mt-1 mb-3" data-key="tl2-title">Xẩm Tàu Điện — Tiết tấu dồn dập theo nhịp phố phường</h4>
+            <p class="editable font-sans text-sm sm:text-base leading-relaxed text-ink/90" data-key="tl2-desc">
+              Bước vào không gian đô thị Hà Nội thế kỷ XX, Xẩm hòa vào tiếng bánh sắt tàu điện leng keng. Tiết tấu trở nên rộn ràng, giòn giã, ngữ điệu linh hoạt và châm biếm hơn — tinh thần ấy được phục dựng sôi nổi tại Chiếu Xẩm chợ Đồng Xuân từ năm 2006.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</article>
+
+<div class="max-w-5xl mx-auto px-6 my-4"><div class="chu-cong-horizontal"></div></div>
+
+<!-- ==================== CHƯƠNG II ==================== -->
+<article id="chuong-2" class="pt-12 sm:pt-16 pb-12">
+  <div class="max-w-[760px] mx-auto px-5 sm:px-6">
+    <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-8">
+      <div class="relative w-16 h-16 shrink-0 flex items-center justify-center">
+        <svg viewBox="0 0 100 100" class="w-full h-full drop-shadow-sm" aria-hidden="true"><polygon points="50,2 60,18 79,11 79,31 97,41 85,57 93,76 74,79 66,97 50,86 34,97 26,79 7,76 15,57 3,41 21,31 21,11 40,18" fill="#1864AB" stroke="#141414" stroke-width="2.4"/></svg>
+        <span class="absolute slide-heading text-2xl text-cream">02</span>
+      </div>
+      <div>
+        <p class="font-sans text-xs font-bold uppercase tracking-[0.2em] text-crimson mb-1">Chương II</p>
+        <h2 class="editable slide-heading text-3xl sm:text-4xl text-ink" data-key="c2-title">
+          GIẢI PHẪU MỘT <span class="text-ocean">“TRẠM PHÁT SÓNG” BẰNG CÓI, GỖ VÀ DA TRĂN</span>
+        </h2>
+      </div>
+    </div>
+
+    <div class="article-prose">
+      <p class="editable chapter-drop-cap" data-key="c2-p1">
+        Khác với nghệ thuật cung đình hay sân khấu kịch hát cần phông màn cầu kỳ, toàn bộ không gian biểu diễn của một chiếu Xẩm xưa gói gọn trên một tấm chiếu hoa cạp điều trải thẳng xuống nền đất, gốc đa hay hè phố. Một gánh Xẩm thường chỉ gồm 2 đến 5 người, nhưng mỗi nhạc cụ lại đảm nhận một chức năng âm học chặt chẽ để giọng hát không bị chìm giữa không gian công cộng ồn ào.
+      </p>
+      <p class="editable" data-key="c2-p2">
+        Trục giai điệu của canh Xẩm nằm ở cây <strong>đàn nhị</strong> (dân gian gọi là đàn cò). Bát nhị hình ống tròn bịt da trăn tạo nên âm sắc vừa sắc, vừa có độ khàn đục đặc trưng; kết hợp với cần đàn, dây cữ (cử nhân) và cung vĩ xát nhựa thông, người kéo nhị có thể mô phỏng gần sát thanh điệu và ngữ khí của giọng nói tiếng Việt. Trong công cuộc phục dựng Xẩm đương đại, những nghệ sĩ gạo cội như NSND Xuân Hoạch không chỉ giữ vai trò truyền dạy, cố vấn cho nhóm Xẩm Hà Thành mà còn trực tiếp nghiên cứu, bảo lưu kỹ thuật chơi và âm sắc mộc mạc của các nhạc cụ cổ.
+      </p>
+      <p class="editable" data-key="c2-p3">
+        Giữ vai trò khung nhịp là <strong>cặp sênh tre, sênh tiền</strong> (thanh gỗ cứng gắn đồng xu kim loại tạo tiếng lách cách giòn) và <strong>trống mảnh</strong> đánh bằng dùi nhỏ. Nhịp trống mảnh và sênh tiền có khả năng biến đổi linh hoạt: khi khoan thai nâng đỡ câu hát tự sự, lúc dồn dập mô phỏng tiếng bánh tàu điện chạy qua phố. Bên cạnh đó, <strong>đàn bầu</strong> (độc huyền cầm) với một dây đàn duy nhất giúp mở rộng các quãng ngân sâu, tạo khoảng lắng cảm xúc cho những làn điệu buồn như điệu Sa mạc trong bài <em>Anh Khóa</em> qua giọng hát cố Nghệ nhân Ưu tú Hà Thị Cầu.
+      </p>
+      <p class="editable" data-key="c2-p4">
+        Đặt trên nền chiếu hoa cạp điều, cùng trang phục mộc mạc như áo dài the, khăn xếp hoặc áo tứ thân, khăn mỏ quạ và chiếc nón lá đặt góc chiếu để nhận lòng tri âm của khách nghe, bộ nhạc cụ ấy tạo thành một hệ thống diễn xướng cơ động: cuộn chiếu lên là di chuyển, trải chiếu ra là lập tức hình thành sân khấu.
+      </p>
+    </div>
+  </div>
+
+  <!-- ===== TƯƠNG TÁC 2: GIẢI PHẪU CHIẾU XẨM ===== -->
+  <section class="max-w-5xl mx-auto px-4 sm:px-6 mt-12">
+    <div class="rounded-3xl border-2 border-ink bg-gradient-to-br from-crimson-soft/65 via-cream-card to-ocean-pale/75 p-5 sm:p-8 shadow-xl">
+      <div class="flex flex-wrap items-center justify-between gap-3 mb-6">
+        <div>
+          <span class="inline-block font-sans text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-ocean text-cream mb-2">Tương tác 02 • Giải phẫu Chiếu Xẩm (5 Hotspots)</span>
+          <h3 class="editable slide-heading text-2xl sm:text-3xl text-ink" data-key="i2-title">
+            Chạm từng đạo cụ trên chiếu hoa để <span class="text-crimson">phóng to &amp; giải phẫu</span>
+          </h3>
+        </div>
+        <span class="font-sans text-xs sm:text-sm font-bold text-crimson bg-white px-3.5 py-1.5 rounded-full border-2 border-ink/15">Bấm vào 5 chấm tròn trên mặt chiếu</span>
+      </div>
+
+      <div class="w-full relative rounded-2xl overflow-hidden border-[3px] border-ink shadow-lg mb-7 bg-[#FBF5E6]">
+        <div class="w-full aspect-[16/10] sm:aspect-[16/9] relative">
+          <svg viewBox="0 0 1000 620" preserveAspectRatio="none" class="w-full h-full block" style="filter: blur(2.5px); transform: scale(1.015);" aria-hidden="true">
+            <rect width="1000" height="620" fill="#F3E5C8"/>
+            <g stroke="#DFC9A1" stroke-width="1.2">
+              <line x1="0" y1="40" x2="1000" y2="40"/><line x1="0" y1="80" x2="1000" y2="80"/><line x1="0" y1="120" x2="1000" y2="120"/>
+              <line x1="0" y1="160" x2="1000" y2="160"/><line x1="0" y1="200" x2="1000" y2="200"/><line x1="0" y1="240" x2="1000" y2="240"/>
+              <line x1="0" y1="280" x2="1000" y2="280"/><line x1="0" y1="320" x2="1000" y2="320"/><line x1="0" y1="360" x2="1000" y2="360"/>
+              <line x1="0" y1="400" x2="1000" y2="400"/><line x1="0" y1="440" x2="1000" y2="440"/><line x1="0" y1="480" x2="1000" y2="480"/>
+              <line x1="0" y1="520" x2="1000" y2="520"/><line x1="0" y1="560" x2="1000" y2="560"/>
+            </g>
+            <rect x="18" y="18" width="964" height="584" fill="none" stroke="#C92A2A" stroke-width="34"/>
+            <rect x="44" y="44" width="912" height="532" fill="none" stroke="#F3E5C8" stroke-width="10"/>
+            <rect x="64" y="64" width="872" height="492" fill="none" stroke="#C92A2A" stroke-width="24"/>
+            <rect x="64" y="64" width="872" height="492" fill="none" stroke="#F3E5C8" stroke-width="8" stroke-dasharray="28 18"/>
+            <g fill="none" stroke="#C92A2A" stroke-width="10" stroke-linecap="square">
+              <path d="M108 185 V108 H195 M134 185 V134 H195 M160 185 V160 H195"/>
+              <path d="M892 185 V108 H805 M866 185 V134 H805 M840 185 V160 H805"/>
+              <path d="M108 435 V512 H195 M134 435 V486 H195 M160 435 V460 H195"/>
+              <path d="M892 435 V512 H805 M866 435 V486 H805 M840 435 V460 H805"/>
+            </g>
+            <g transform="translate(500, 310)" fill="none" stroke="#C92A2A">
+              <circle cx="0" cy="0" r="96" stroke-width="14"/>
+              <circle cx="0" cy="0" r="72" stroke-width="8" stroke-dasharray="36 16"/>
+              <line x1="0" y1="-92" x2="0" y2="92" stroke-width="12"/>
+              <line x1="-68" y1="-34" x2="68" y2="-34" stroke-width="10"/>
+              <line x1="-68" y1="0" x2="68" y2="0" stroke-width="10"/>
+              <line x1="-68" y1="34" x2="68" y2="34" stroke-width="10"/>
+              <rect x="-38" y="-56" width="76" height="112" stroke-width="9"/>
+            </g>
+          </svg>
+
+          <svg viewBox="0 0 1000 620" class="absolute inset-0 w-full h-full block" role="img" aria-label="5 đạo cụ đặt trên chiếu hoa cạp điều">
+            <g transform="translate(135, 115)" filter="url(#hue-diecut)" class="cursor-pointer" onclick="selectHotspot(1)">
+              <line x1="25" y1="15" x2="178" y2="215" stroke="#141414" stroke-width="11" stroke-linecap="round"/>
+              <line x1="25" y1="15" x2="178" y2="215" stroke="#C92A2A" stroke-width="6.5" stroke-linecap="round"/>
+              <line x1="42" y1="36" x2="78" y2="16" stroke="#141414" stroke-width="5" stroke-linecap="round"/>
+              <line x1="58" y1="56" x2="94" y2="36" stroke="#141414" stroke-width="5" stroke-linecap="round"/>
+              <line x1="78" y1="88" x2="94" y2="78" stroke="#1864AB" stroke-width="4"/>
+              <rect x="142" y="176" width="58" height="48" rx="8" transform="rotate(-38 171 200)" fill="#C92A2A" stroke="#141414" stroke-width="2.6"/>
+              <ellipse cx="154" cy="184" rx="22" ry="12" transform="rotate(-38 154 184)" fill="#FFFDF5" stroke="#141414" stroke-width="2.2"/>
+              <line x1="54" y1="30" x2="154" y2="184" stroke="#141414" stroke-width="1.6"/>
+              <line x1="70" y1="50" x2="162" y2="192" stroke="#141414" stroke-width="1.6"/>
+              <path d="M22 182 Q122 128 214 156" fill="none" stroke="#141414" stroke-width="4.5" stroke-linecap="round"/>
+              <line x1="26" y1="180" x2="210" y2="156" stroke="#FFFDF5" stroke-width="2"/>
+            </g>
+            <g transform="translate(425, 92)" filter="url(#hue-diecut)" class="cursor-pointer" onclick="selectHotspot(2)">
+              <rect x="14" y="34" width="156" height="26" rx="5" transform="rotate(-14 92 47)" fill="#FFFDF5" stroke="#141414" stroke-width="2.5"/>
+              <circle cx="46" cy="52" r="8" fill="#C92A2A" stroke="#141414" stroke-width="2"/>
+              <circle cx="92" cy="41" r="8" fill="#C92A2A" stroke="#141414" stroke-width="2"/>
+              <circle cx="138" cy="30" r="8" fill="#C92A2A" stroke="#141414" stroke-width="2"/>
+              <rect x="28" y="88" width="148" height="22" rx="5" transform="rotate(11 102 99)" fill="#1864AB" stroke="#141414" stroke-width="2.5"/>
+            </g>
+            <g transform="translate(405, 255)" filter="url(#hue-diecut)" class="cursor-pointer" onclick="selectHotspot(3)">
+              <ellipse cx="95" cy="76" rx="76" ry="34" fill="#C92A2A" stroke="#141414" stroke-width="2.8"/>
+              <ellipse cx="95" cy="58" rx="76" ry="32" fill="#FFFDF5" stroke="#141414" stroke-width="2.8"/>
+              <ellipse cx="95" cy="58" rx="48" ry="19" fill="none" stroke="#C92A2A" stroke-width="2.2" stroke-dasharray="6 4"/>
+              <line x1="16" y1="14" x2="102" y2="60" stroke="#141414" stroke-width="5" stroke-linecap="round"/>
+              <line x1="176" y1="12" x2="96" y2="56" stroke="#141414" stroke-width="5" stroke-linecap="round"/>
+            </g>
+            <g transform="translate(650, 220)" filter="url(#hue-diecut)" class="cursor-pointer" onclick="selectHotspot(4)">
+              <rect x="26" y="138" width="210" height="32" rx="6" transform="rotate(-24 131 154)" fill="#C92A2A" stroke="#141414" stroke-width="2.8"/>
+              <rect x="44" y="144" width="174" height="16" rx="3" transform="rotate(-24 131 152)" fill="#FFFDF5" stroke="#141414" stroke-width="1.8"/>
+              <path d="M36 184 Q12 104 44 62" fill="none" stroke="#141414" stroke-width="5" stroke-linecap="round"/>
+              <path d="M26 118 C4 106 6 154 28 144 C48 148 52 110 26 118 Z" fill="#1971C2" stroke="#141414" stroke-width="2.6"/>
+              <line x1="42" y1="70" x2="216" y2="112" stroke="#141414" stroke-width="2.2"/>
+            </g>
+            <g transform="translate(150, 395)" filter="url(#hue-diecut)" class="cursor-pointer" onclick="selectHotspot(5)">
+              <ellipse cx="88" cy="72" rx="76" ry="26" fill="#FBF5E6" stroke="#141414" stroke-width="2.6"/>
+              <path d="M14 68 L88 10 L162 68" fill="#FFFDF5" stroke="#141414" stroke-width="2.6"/>
+              <path d="M46 74 Q88 88 130 74" fill="none" stroke="#C92A2A" stroke-width="3.5"/>
+              <ellipse cx="174" cy="94" rx="32" ry="16" fill="#141414" stroke="#141414" stroke-width="2.2"/>
+              <ellipse cx="174" cy="88" rx="20" ry="8" fill="#1864AB"/>
+            </g>
+          </svg>
+
+          <button type="button" onclick="selectHotspot(1)" id="hs-1" style="left: 22%; top: 34%;" class="mat-hotspot is-selected absolute w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-crimson text-cream font-poster font-bold text-lg border-2 border-white shadow-lg flex items-center justify-center cursor-pointer" aria-label="1. Đàn nhị">1</button>
+          <button type="button" onclick="selectHotspot(2)" id="hs-2" style="left: 51%; top: 24%;" class="mat-hotspot absolute w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-crimson text-cream font-poster font-bold text-lg border-2 border-white shadow-lg flex items-center justify-center cursor-pointer" aria-label="2. Sênh tre &amp; Sênh tiền">2</button>
+          <button type="button" onclick="selectHotspot(3)" id="hs-3" style="left: 50%; top: 53%;" class="mat-hotspot absolute w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-crimson text-cream font-poster font-bold text-lg border-2 border-white shadow-lg flex items-center justify-center cursor-pointer" aria-label="3. Trống mảnh &amp; dùi">3</button>
+          <button type="button" onclick="selectHotspot(4)" id="hs-4" style="left: 77%; top: 58%;" class="mat-hotspot absolute w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-crimson text-cream font-poster font-bold text-lg border-2 border-white shadow-lg flex items-center justify-center cursor-pointer" aria-label="4. Đàn bầu">4</button>
+          <button type="button" onclick="selectHotspot(5)" id="hs-5" style="left: 25%; top: 75%;" class="mat-hotspot absolute w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-crimson text-cream font-poster font-bold text-lg border-2 border-white shadow-lg flex items-center justify-center cursor-pointer" aria-label="5. Chiếu hoa cạp điều &amp; trang phục">5</button>
+        </div>
+      </div>
+
+      <div class="w-full bg-cream-card rounded-2xl border-[3px] border-ink p-5 sm:p-8 shadow-md">
+        <div class="flex flex-wrap items-center justify-between gap-2 pb-5 mb-6 border-b-2 border-ink/10 font-sans">
+          <span id="hs-badge" class="text-xs font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full bg-crimson text-cream">Điểm chạm 1 / 5</span>
+          <div class="flex flex-wrap gap-1.5">
+            <button type="button" onclick="selectHotspot(1)" id="hs-pill-1" class="hs-pill px-3 py-1.5 rounded-xl text-xs font-bold bg-ocean text-cream cursor-pointer">1. Đàn nhị</button>
+            <button type="button" onclick="selectHotspot(2)" id="hs-pill-2" class="hs-pill px-3 py-1.5 rounded-xl text-xs font-bold bg-cream-warm text-ink hover:bg-ocean/15 cursor-pointer">2. Sênh tiền</button>
+            <button type="button" onclick="selectHotspot(3)" id="hs-pill-3" class="hs-pill px-3 py-1.5 rounded-xl text-xs font-bold bg-cream-warm text-ink hover:bg-ocean/15 cursor-pointer">3. Trống mảnh</button>
+            <button type="button" onclick="selectHotspot(4)" id="hs-pill-4" class="hs-pill px-3 py-1.5 rounded-xl text-xs font-bold bg-cream-warm text-ink hover:bg-ocean/15 cursor-pointer">4. Đàn bầu</button>
+            <button type="button" onclick="selectHotspot(5)" id="hs-pill-5" class="hs-pill px-3 py-1.5 rounded-xl text-xs font-bold bg-cream-warm text-ink hover:bg-ocean/15 cursor-pointer">5. Chiếu &amp; Trang phục</button>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 items-start">
+          <div class="lg:col-span-6">
+            <div class="rounded-2xl border-[3px] border-crimson bg-gradient-to-br from-cream-warm via-cream to-ocean-pale/70 overflow-hidden shadow-inner">
+              <div id="hs-custom-media-display" class="hidden w-full aspect-video bg-black relative"></div>
+              <div id="hs-svg-box" class="w-full aspect-video flex items-center justify-center p-4"></div>
+
+              <div class="owner-only bg-cream-warm/95 border-t-2 border-ink/15 px-4 py-3 font-sans block">
+                <div class="flex flex-wrap items-center justify-between gap-2">
+                  <span class="text-xs font-bold text-ink">🖼️ Ảnh / Video cận cảnh dụng cụ này:</span>
+                  <div class="flex flex-wrap gap-1.5">
+                    <button type="button" onclick="toggleHotspotMediaForm()" class="text-xs font-bold px-3 py-1.5 rounded-lg bg-crimson text-cream hover:bg-crimson-deep transition cursor-pointer">🔗 Dán link Ảnh / Video</button>
+                    <label class="text-xs font-bold px-3 py-1.5 rounded-lg bg-ocean text-cream hover:bg-ink transition cursor-pointer">
+                      📁 Tải file từ máy
+                      <input type="file" accept="image/*,video/*" class="hidden" onchange="handleHotspotLocalFile(event)"/>
+                    </label>
+                  </div>
+                </div>
+                <div id="hs-media-form" class="hidden mt-3 pt-3 border-t border-ink/15 flex flex-col sm:flex-row gap-2">
+                  <input type="text" id="hs-media-url-input" placeholder="Dán link ảnh (.jpg/.png) hoặc link YouTube / .mp4..." class="flex-1 text-xs px-3 py-2 rounded-lg border border-ocean/40 bg-white"/>
+                  <div class="flex gap-1.5">
+                    <button type="button" onclick="saveHotspotMediaUrl()" class="text-xs font-bold px-3 py-2 rounded-lg bg-ocean text-cream cursor-pointer">Lưu khung này</button>
+                    <button type="button" onclick="clearHotspotMedia()" class="text-xs font-bold px-2.5 py-2 rounded-lg bg-ink/10 text-ink cursor-pointer">Xóa</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6 flex flex-col justify-between">
+            <div>
+              <h4 id="hs-title" class="slide-heading text-3xl text-ink mb-3">Đàn Nhị (Đàn Cò)</h4>
+              <p id="hs-desc" class="font-sans text-sm sm:text-base leading-relaxed text-ink/90 mb-5"></p>
+              <div class="mb-6">
+                <div class="font-sans text-xs font-bold uppercase tracking-wider text-ocean mb-2">Cấu tạo &amp; Đặc điểm âm học:</div>
+                <div id="hs-parts" class="flex flex-wrap gap-2"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</article>
+
+<div class="max-w-5xl mx-auto px-6 my-4"><div class="chu-cong-horizontal"></div></div>
+
+<!-- ==================== CHƯƠNG III ==================== -->
+<article id="chuong-3" class="pt-12 sm:pt-16 pb-12">
+  <div class="max-w-[760px] mx-auto px-5 sm:px-6">
+    <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-8">
+      <div class="relative w-16 h-16 shrink-0 flex items-center justify-center">
+        <svg viewBox="0 0 100 100" class="w-full h-full drop-shadow-sm" aria-hidden="true"><polygon points="50,2 60,18 79,11 79,31 97,41 85,57 93,76 74,79 66,97 50,86 34,97 26,79 7,76 15,57 3,41 21,31 21,11 40,18" fill="#C92A2A" stroke="#141414" stroke-width="2.4"/></svg>
+        <span class="absolute slide-heading text-2xl text-cream">03</span>
+      </div>
+      <div>
+        <p class="font-sans text-xs font-bold uppercase tracking-[0.2em] text-ocean mb-1">Chương III</p>
+        <h2 class="editable slide-heading text-3xl sm:text-4xl text-ink" data-key="c3-title">
+          BA LỚP NGHỆ THUẬT VÀ <span class="text-crimson">“MẠCH NGẦM” GIỮA PHỐ THỊ HÔM NAY</span>
+        </h2>
+      </div>
+    </div>
+    <div class="article-prose">
+      <p class="editable chapter-drop-cap" data-key="c3-p1">
+        Đặt trong dòng chảy văn hóa Việt Nam, sức bền của Hát Xẩm không chỉ nằm ở yếu tố hoài niệm. Nếu bóc tách cấu trúc, một canh Xẩm vận hành trên ba lớp nghệ thuật đan cài nhau:
+      </p>
+    </div>
+  </div>
+
+  <div class="max-w-5xl mx-auto px-5 sm:px-6 my-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+      <div class="rounded-2xl border-2 border-ink bg-cream-card p-6 shadow-md">
+        <div class="w-11 h-11 rounded-xl bg-crimson text-cream slide-heading text-xl flex items-center justify-center mb-4 border-2 border-ink">01</div>
+        <h3 class="editable slide-heading text-xl text-crimson mb-2" data-key="layer1-title">Lớp thứ nhất — Mỹ thuật không gian tối giản</h3>
+        <p class="editable font-sans text-sm leading-relaxed text-ink/90" data-key="layer1-desc">Sự tương phản thị giác giữa sắc đỏ của chiếu cạp điều, màu nâu gỗ nhạc cụ và nền cảnh đời thường giúp chiếu Xẩm dễ nhận diện ngay giữa đám đông.</p>
+      </div>
+      <div class="rounded-2xl border-2 border-ink bg-cream-card p-6 shadow-md">
+        <div class="w-11 h-11 rounded-xl bg-ocean text-cream slide-heading text-xl flex items-center justify-center mb-4 border-2 border-ink">02</div>
+        <h3 class="editable slide-heading text-xl text-ocean mb-2" data-key="layer2-title">Lớp thứ hai — Kỷ luật âm nhạc ngũ cung</h3>
+        <p class="editable font-sans text-sm leading-relaxed text-ink/90" data-key="layer2-desc">Sự ăn khớp chặt chẽ giữa người kéo đàn giữ giai điệu và người hát chính vừa nhả chữ, luyến láy vừa tự gõ phách.</p>
+      </div>
+      <div class="rounded-2xl border-2 border-ink bg-gradient-to-br from-crimson-soft/55 via-cream-card to-ocean-pale/65 p-6 shadow-md">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-crimson to-ocean text-cream slide-heading text-xl flex items-center justify-center mb-4 border-2 border-ink">03</div>
+        <h3 class="editable slide-heading text-xl text-ink mb-2" data-key="layer3-title">Lớp thứ ba — Nghệ thuật kể chuyện đời và ứng tác</h3>
+        <p class="editable font-sans text-sm leading-relaxed text-ink/90" data-key="layer3-desc">Đây là phần lõi giúp Xẩm thích nghi qua nhiều thời đại. Lời ca lấy chất liệu từ chuyện có thật quanh chiếu hát, sử dụng thể lục bát hoặc lục bát biến thể, sẵn sàng đổi giọng từ tự sự sang châm biếm tùy theo khán giả trước mặt.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-[760px] mx-auto px-5 sm:px-6 mt-8">
+    <div class="article-prose">
+      <p class="editable" data-key="c3-p2">
+        Chính lớp thứ ba này giải thích vì sao tinh thần của Xẩm vẫn âm thầm song hành cùng văn hóa đại chúng đương đại. Lối gieo vần sắc bén, châm biếm thói đời trong <em>Xẩm chợ</em> hay <em>Mục hạ vô nhân</em> có nhiều điểm tương đồng với các nội dung bình luận xã hội hóm hỉnh trên mạng xã hội; kỹ thuật hát nói ứng tác theo nhịp phách chặt chẽ gặp gỡ với tinh thần của nhạc Rap; còn mạch tự sự về tình thân trong <em>Xẩm thập ân</em> vẫn chạm tới người trẻ qua các kênh kể chuyện âm thanh ngày nay.
+      </p>
+      <p class="editable" data-key="c3-p3">
+        Quá trình phục dựng và tiếp nối Xẩm trong hai thập kỷ qua cho thấy hai hướng đi song song: bảo tồn vốn cổ và thử nghiệm giao thoa. Sau khi chiếu Xẩm trở lại chợ Đồng Xuân năm 2006, nhóm Xẩm Hà Thành do nghệ sĩ Mai Tuyết Hoa và nhà nghiên cứu âm nhạc Nguyễn Quang Long sáng lập năm 2009 (với sự cố vấn của các nghệ sĩ gạo cội như NSND Xuân Hoạch) đã kiên trì phục dựng nhiều bài bản cổ — điển hình là việc phục hồi <em>Xẩm thập ân theo điệu Oán thập điều</em> của cố nghệ nhân Nguyễn Văn Nguyên (cụ Trùm Nguyên) từ một cuốn băng cassette không còn nguyên vẹn.
+      </p>
+      <p class="editable" data-key="c3-p4">
+        Ở nhánh tiếp cận công chúng trẻ, năm 2020, ca sĩ Hà Myo ra mắt sản phẩm <em>Xẩm Hà Nội</em> kết hợp chất liệu Xẩm với Rap, nhạc điện tử EDM và vũ đạo hiện đại; đến năm 2025, cô tiếp tục đưa Xẩm vào trường học và các nền tảng mạng xã hội. Cùng năm 2025, tiết mục <em>Mục hạ vô nhân</em> do Quách Mai Thy và nghệ sĩ Trần Đức Minh biểu diễn tại <em>Gala Hồn Việt</em> tiếp tục cho thấy sức hút của chất liệu trào phúng dân gian trên sân khấu lớn. Tuy nhiên, ranh giới giữa sáng tạo và làm mờ bản sắc vẫn là bài toán thường trực: nếu chỉ vay mượn vài câu hát để trang trí cho bản phối điện tử mà bỏ quên cách nhả chữ, nhấn nhịp và tinh thần kể chuyện, phần hồn cốt của Xẩm rất dễ bị giản lược.
+      </p>
+    </div>
+  </div>
+</article>
+
+<div class="max-w-5xl mx-auto px-6 my-4"><div class="chu-cong-horizontal"></div></div>
+
+<!-- ==================== CHƯƠNG IV ==================== -->
+<article id="chuong-4" class="pt-12 sm:pt-16 pb-12">
+  <div class="max-w-[760px] mx-auto px-5 sm:px-6">
+    <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-8">
+      <div class="relative w-16 h-16 shrink-0 flex items-center justify-center">
+        <svg viewBox="0 0 100 100" class="w-full h-full drop-shadow-sm" aria-hidden="true"><polygon points="50,2 60,18 79,11 79,31 97,41 85,57 93,76 74,79 66,97 50,86 34,97 26,79 7,76 15,57 3,41 21,31 21,11 40,18" fill="#1864AB" stroke="#141414" stroke-width="2.4"/></svg>
+        <span class="absolute slide-heading text-2xl text-cream">04</span>
+      </div>
+      <div>
+        <p class="font-sans text-xs font-bold uppercase tracking-[0.2em] text-crimson mb-1">Chương IV</p>
+        <h2 class="editable slide-heading text-3xl sm:text-4xl text-ink" data-key="c4-title">
+          BẢN ĐỒ NHỮNG MẠCH NGUỒN VÀ <span class="text-ocean">GÓC NHÌN ĐA CHIỀU</span>
+        </h2>
+      </div>
+    </div>
+
+    <div class="article-prose">
+      <p class="editable chapter-drop-cap" data-key="c4-p1">
+        Từ cái nôi Ninh Bình — quê hương của cố Nghệ nhân Ưu tú Hà Thị Cầu (qua đời năm 2013) — hành trình của Hát Xẩm trải qua nhiều vùng văn hóa Bắc Bộ như Nam Định, Hải Phòng, hội tụ mạnh mẽ tại Hà Nội và dần lan tỏa vào không gian thử nghiệm nghệ thuật ở TP.HCM. Ngày 12/01/2022, Bộ Văn hóa, Thể thao và Du lịch ban hành Quyết định số 76/QĐ-BVHTTDL ghi danh Nghệ thuật Hát Xẩm của tỉnh Ninh Bình vào Danh mục di sản văn hóa phi vật thể quốc gia. Theo ghi nhận của TTXVN tháng 4/2024, tại Hà Nội cũng đã hình thành thêm nhiều câu lạc bộ, điểm biểu diễn và lớp truyền dạy. Gần đây nhất, lớp truyền dạy nhạc cụ và trình diễn Hát Xẩm năm 2026 tại xã Yên Từ (Ninh Bình) duy trì 65 học viên chính thức, đào tạo được 14 học viên sử dụng thành thạo đàn nhị, trống Xẩm và thành lập đội văn nghệ 7 thành viên.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 my-6 font-sans">
+      <div class="p-4 rounded-2xl bg-cream-card border-2 border-ink text-center"><div class="slide-heading text-3xl text-crimson">2022</div><div class="text-xs text-ink/85 mt-1 font-medium">Di sản văn hóa phi vật thể QG (QĐ 76)</div></div>
+      <div class="p-4 rounded-2xl bg-cream-card border-2 border-ink text-center"><div class="slide-heading text-3xl text-ocean">65</div><div class="text-xs text-ink/85 mt-1 font-medium">Học viên lớp Xẩm xã Yên Từ (2026)</div></div>
+      <div class="p-4 rounded-2xl bg-cream-card border-2 border-ink text-center"><div class="slide-heading text-3xl text-crimson">14</div><div class="text-xs text-ink/85 mt-1 font-medium">Học viên thành thạo đàn nhị, trống Xẩm</div></div>
+      <div class="p-4 rounded-2xl bg-cream-card border-2 border-ink text-center"><div class="slide-heading text-3xl text-ocean">07</div><div class="text-xs text-ink/85 mt-1 font-medium">Thành viên đội văn nghệ nòng cốt</div></div>
+    </div>
+  </div>
+
+  <div class="max-w-[760px] mx-auto px-5 sm:px-6 mt-10">
+    <div class="article-prose">
+      <p class="editable" data-key="c4-p2">
+        Nhìn vào thực tế bảo tồn hiện nay, khi đội ngũ nghệ nhân nắm giữ vốn cổ ngày càng mỏng và tư liệu vẫn còn phân tán ở nhiều thư viện, tư gia, câu chuyện giữ nghề đang đặt ra đối thoại trực tiếp giữa hai góc nhìn:
+      </p>
+    </div>
+  </div>
+
+  <div class="max-w-5xl mx-auto px-5 sm:px-6 mt-4 mb-14">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Góc nhìn 1 -->
+      <div class="rounded-3xl bg-cream-card border-t-8 border-crimson border-x-2 border-b-2 border-x-ink border-b-ink p-6 sm:p-7 shadow-md flex flex-col justify-between">
+        <div>
+          <span class="font-sans text-xs font-bold uppercase tracking-widest text-crimson">Góc nhìn 01 • Bảo tồn &amp; Nghiên cứu</span>
+          <h3 class="editable slide-heading text-2xl text-ink mt-1 mb-4" data-key="view1-title">Nhóm Xẩm Hà Thành — Nguyễn Quang Long, Mai Tuyết Hoa &amp; NSND Xuân Hoạch</h3>
+
+          <div class="mb-5 rounded-2xl border-[4px] border-crimson bg-cream-warm overflow-hidden shadow-sm">
+            <div id="vp1-media-mount" class="aspect-video w-full flex flex-col items-center justify-center p-4 text-center bg-gradient-to-br from-crimson-soft/70 to-cream">
+              <span class="text-3xl mb-1.5">🎻📜</span>
+              <span class="font-sans text-xs font-bold text-crimson">Khung Ảnh / Video Tư Liệu Góc Nhìn 1</span>
+              <span class="font-sans text-[11px] text-ink/70 mt-0.5">Nhóm Xẩm Hà Thành &amp; nghệ nhân phục dựng vốn cổ</span>
+            </div>
+            <div class="owner-only bg-white/95 border-t border-ink/15 px-3 py-2 flex flex-wrap items-center justify-between gap-2 font-sans">
+              <span class="text-[11px] font-semibold text-ink/75">Chèn ảnh / video minh họa:</span>
+              <div class="flex gap-1.5">
+                <button type="button" onclick="toggleViewpointForm(1)" class="text-[11px] font-bold px-2.5 py-1 rounded-lg bg-crimson text-cream cursor-pointer">🔗 Dán link</button>
+                <label class="text-[11px] font-bold px-2.5 py-1 rounded-lg bg-ocean text-cream cursor-pointer">
+                  📁 Tải file
+                  <input type="file" accept="image/*,video/*" class="hidden" onchange="handleViewpointFile(1, event)"/>
+                </label>
+              </div>
+            </div>
+            <div id="vp1-form" class="owner-only hidden bg-cream-warm px-3 py-2.5 border-t border-ink/15 flex gap-1.5 font-sans">
+              <input type="text" id="vp1-input" placeholder="Dán link ảnh (.jpg/.png) hoặc YouTube/.mp4..." class="flex-1 text-xs px-2.5 py-1.5 rounded-lg border border-crimson/40 bg-white"/>
+              <button type="button" onclick="applyViewpointUrl(1)" class="text-xs font-bold px-3 py-1.5 rounded-lg bg-crimson text-cream cursor-pointer">Lưu</button>
+            </div>
+          </div>
+
+          <p class="editable font-sans text-sm sm:text-[15.5px] leading-[1.85] text-ink/90 mb-5" data-key="view1-desc">
+            Từ thực tiễn phục dựng các bài bản cổ và xây dựng không gian diễn xướng tại Hà Nội từ năm 2006–2009 đến nay, hướng tiếp cận của các nghệ sĩ, nhà nghiên cứu khẳng định Xẩm không chỉ là âm thanh để lưu trữ trong kho băng đĩa. Quá trình phục hồi những tác phẩm thất truyền như <em>Xẩm thập ân</em> của cụ Trùm Nguyên cho thấy giá trị của Xẩm nằm ở cách nhả chữ, luyến láy và lối kể chuyện mang dấu ấn thời đại. Do đó, dù khuyến khích sáng tác mới, người thực hành vẫn cần nắm chắc vốn cổ và có không gian biểu diễn thực tế để di sản không bị tách rời khỏi đời sống.
+          </p>
+        </div>
+      </div>
+
+      <!-- Góc nhìn 2 -->
+      <div class="rounded-3xl bg-cream-card border-t-8 border-ocean border-x-2 border-b-2 border-x-ink border-b-ink p-6 sm:p-7 shadow-md flex flex-col justify-between">
+        <div>
+          <span class="font-sans text-xs font-bold uppercase tracking-widest text-ocean">Góc nhìn 02 • Tiếp nối của thế hệ trẻ</span>
+          <h3 class="editable slide-heading text-2xl text-ink mt-1 mb-4" data-key="view2-title">Ca sĩ Hà Myo &amp; Dự án Vọng Phách Kinh Kỳ</h3>
+
+          <div class="mb-5 rounded-2xl border-[4px] border-ocean bg-ocean-pale overflow-hidden shadow-sm">
+            <div id="vp2-media-mount" class="aspect-video w-full flex flex-col items-center justify-center p-4 text-center bg-gradient-to-br from-ocean-pale to-cream">
+              <span class="text-3xl mb-1.5">🎤✨</span>
+              <span class="font-sans text-xs font-bold text-ocean">Khung Ảnh / Video Tư Liệu Góc Nhìn 2</span>
+              <span class="font-sans text-[11px] text-ink/70 mt-0.5">Ca sĩ Hà Myo &amp; Dự án Vọng Phách Kinh Kỳ</span>
+            </div>
+            <div class="owner-only bg-white/95 border-t border-ink/15 px-3 py-2 flex flex-wrap items-center justify-between gap-2 font-sans">
+              <span class="text-[11px] font-semibold text-ink/75">Chèn ảnh / video minh họa:</span>
+              <div class="flex gap-1.5">
+                <button type="button" onclick="toggleViewpointForm(2)" class="text-[11px] font-bold px-2.5 py-1 rounded-lg bg-ocean text-cream cursor-pointer">🔗 Dán link</button>
+                <label class="text-[11px] font-bold px-2.5 py-1 rounded-lg bg-crimson text-cream cursor-pointer">
+                  📁 Tải file
+                  <input type="file" accept="image/*,video/*" class="hidden" onchange="handleViewpointFile(2, event)"/>
+                </label>
+              </div>
+            </div>
+            <div id="vp2-form" class="owner-only hidden bg-ocean-pale px-3 py-2.5 border-t border-ink/15 flex gap-1.5 font-sans">
+              <input type="text" id="vp2-input" placeholder="Dán link ảnh (.jpg/.png) hoặc YouTube/.mp4..." class="flex-1 text-xs px-2.5 py-1.5 rounded-lg border border-ocean/40 bg-white"/>
+              <button type="button" onclick="applyViewpointUrl(2)" class="text-xs font-bold px-3 py-1.5 rounded-lg bg-ocean text-cream cursor-pointer">Lưu</button>
+            </div>
+          </div>
+
+          <p class="editable font-sans text-sm sm:text-[15.5px] leading-[1.85] text-ink/90 mb-5" data-key="view2-desc">
+            Ở phía những người thực hành trẻ, Xẩm được nhìn nhận như một chất liệu sống có khả năng đối thoại mạnh mẽ với khán giả Gen Z. Kinh nghiệm từ <em>Xẩm Hà Nội</em> (2020) và chuỗi hoạt động mang Xẩm đến trường học năm 2025 của ca sĩ Hà Myo cho thấy nhịp điệu giàu tiết tấu của Xẩm hoàn toàn có thể hòa quyện cùng nhạc điện tử, Rap để phá vỡ định kiến nhạc dân gian khó nghe. Song song đó, theo ghi nhận của VOV tháng 8/2026, đại diện dự án <strong>Vọng Phách Kinh Kỳ</strong> cũng nhấn mạnh một nguyên tắc quan trọng: mọi sự làm mới và ứng dụng công nghệ trải nghiệm đều phải khởi đi từ việc hiểu đúng, tôn trọng phần cốt của Xẩm, tránh biến tấu quá đà làm công chúng hiểu sai về bản chất di sản.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= PODCAST ================= -->
+  <section id="podcast" class="max-w-4xl mx-auto px-4 sm:px-6 my-14">
+    <div class="rounded-3xl p-1.5 bg-gradient-to-br from-crimson via-cream-warm to-ocean shadow-xl">
+      <div class="rounded-[20px] bg-gradient-to-br from-[#2B1719] via-[#1C2A32] to-[#123A4A] text-cream p-6 sm:p-9 relative overflow-hidden">
+        <div class="relative z-10">
+          <div class="flex flex-wrap items-center gap-2 mb-3">
+            <span class="font-sans text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-crimson text-cream">🎙️ Podcast Đa Phương Tiện</span>
+            <span class="editable font-sans text-xs text-cream/80" data-key="pod-meta">Trò chuyện giữa Linh và Nam (22–25 tuổi) • Thời lượng: 4–5 phút</span>
+          </div>
+
+          <h3 class="editable slide-heading text-3xl sm:text-4xl text-cream mb-6" data-key="pod-title">
+            PODCAST: “GIỮ NHỊP PHÁCH XƯA TRONG PHỐ THỊ HÔM NAY”
+          </h3>
+
+          <div id="podcast-slot" class="rounded-2xl border-2 border-dashed border-cream/40 bg-white/10 backdrop-blur-sm p-5 sm:p-7 mb-5">
+            <div id="podcast-placeholder" class="text-center py-3">
+              <div class="w-14 h-14 mx-auto mb-3 rounded-2xl bg-gradient-to-br from-crimson to-ocean flex items-center justify-center text-2xl shadow-lg border border-cream/30">🎧</div>
+              <h4 class="owner-only slide-heading text-xl text-cream mb-1">Không gian chờ nhúng Podcast của bạn</h4>
+              <p class="owner-only font-sans text-xs sm:text-sm text-cream/75 max-w-lg mx-auto mb-5">
+                Dán đường dẫn file MP3, link Spotify / SoundCloud, mã &lt;iframe&gt; hoặc chọn file audio từ máy tính.
+              </p>
+              <h4 class="viewer-only slide-heading text-xl text-cream mb-1">Podcast đang được cập nhật</h4>
+              <p class="viewer-only font-sans text-xs sm:text-sm text-cream/75 max-w-lg mx-auto">Trong lúc chờ, bạn có thể đọc toàn văn kịch bản đối thoại ngay bên dưới.</p>
+              <div class="owner-only flex flex-wrap items-center justify-center gap-3 font-sans">
+                <button type="button" onclick="togglePodcastEmbedForm()" class="text-xs sm:text-sm font-bold px-4 py-2.5 rounded-xl bg-crimson hover:bg-crimson-deep text-cream transition shadow-md cursor-pointer">
+                  🔗 Dán link MP3 / Spotify / SoundCloud / iframe
+                </button>
+                <label class="text-xs sm:text-sm font-bold px-4 py-2.5 rounded-xl bg-ocean hover:bg-ocean-mid text-cream transition shadow-md cursor-pointer">
+                  📁 Chọn file audio từ máy (.mp3)
+                  <input type="file" accept="audio/*" class="hidden" onchange="handleLocalPodcastUpload(event)"/>
+                </label>
+              </div>
+            </div>
+
+            <div id="podcast-embed-form" class="owner-only hidden mt-4 pt-4 border-t border-white/20 font-sans">
+              <div class="flex flex-col sm:flex-row gap-2">
+                <input type="text" id="podcast-input" placeholder="Dán URL Spotify / SoundCloud / .mp3 hoặc thẻ &lt;iframe ...&gt;" class="flex-1 text-xs sm:text-sm px-3.5 py-2.5 rounded-xl bg-cream text-ink focus:outline-none"/>
+                <button type="button" onclick="applyPodcastEmbed()" class="text-xs sm:text-sm font-bold px-5 py-2.5 rounded-xl bg-crimson hover:bg-crimson-deep text-cream cursor-pointer">Nhúng ngay</button>
+              </div>
+            </div>
+
+            <div id="podcast-active-player" class="hidden">
+              <div id="podcast-player-mount" class="mb-3"></div>
+              <div class="owner-only flex flex-wrap items-center justify-between gap-2 pt-3 border-t border-white/15 font-sans text-xs">
+                <span id="podcast-source-label" class="text-cream/80 truncate max-w-md">Đã gắn nguồn Podcast</span>
+                <div class="flex gap-2">
+                  <button type="button" onclick="togglePodcastEmbedForm(true)" class="px-3 py-1.5 rounded-lg bg-white/15 hover:bg-white/25 text-cream font-semibold cursor-pointer">Đổi link</button>
+                  <button type="button" onclick="clearPodcastEmbed()" class="px-3 py-1.5 rounded-lg bg-crimson/70 hover:bg-crimson text-cream font-semibold cursor-pointer">Gỡ trình phát</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-2xl bg-cream text-ink overflow-hidden border-2 border-ink">
+            <button type="button" onclick="toggleTranscript()" class="w-full px-5 py-4 flex items-center justify-between gap-3 font-sans text-sm font-bold text-ink hover:bg-cream-warm transition cursor-pointer">
+              <span>📄 Xem toàn văn kịch bản đối thoại (Linh &amp; Nam)</span>
+              <span id="transcript-chevron" class="text-ocean transition-transform duration-300">▼</span>
+            </button>
+            <div id="podcast-transcript" class="hidden px-5 sm:px-7 pb-6 pt-2 border-t border-ink/15 font-sans text-sm sm:text-base leading-relaxed space-y-3.5">
+              <p class="editable text-xs font-bold uppercase tracking-wider text-crimson bg-crimson-soft/75 px-3 py-2 rounded-lg" data-key="pod-s0">[Nhạc mở đầu: 5 giây tiếng đàn nhị và sênh tiền, hạ nhỏ dần rồi tắt]</p>
+              <p class="editable" data-key="pod-s1"><strong class="text-crimson">Linh:</strong> Đọc đến đoạn các bạn trẻ bây giờ kết hợp Xẩm với Rap, với nhạc điện tử, tự nhiên mình lại nhớ cảm giác lần đầu nghe một bản Xẩm cổ thu từ băng cũ. Thú thật là lúc đầu mình hơi khó nghe, phải đọc lời mới thấy hay.</p>
+              <p class="editable" data-key="pod-s2"><strong class="text-ocean">Nam:</strong> Mình cũng thế. Nhưng khi hiểu lời rồi mới thấy người xưa kể chuyện rất gọn và thấm. Như bài <em>Anh Khóa</em> của cố nghệ nhân Hà Thị Cầu, tên bài nhắc đến người chồng đi học xa nhưng toàn bộ cảm xúc lại kể từ góc nhìn của người vợ ở lại. Hay như <em>Mục hạ vô nhân</em> thì mỉa mai thói kiêu căng rất duyên, nghe bật cười mà vẫn thấy nhột.</p>
+              <p class="editable" data-key="pod-s3"><strong class="text-crimson">Linh:</strong> Đấy, chính cái kiểu nói thẳng, hơi “xéo xắt” mà vẫn gần gũi ấy mình lại thấy rất hợp gu Gen Z bây giờ. Thế nên khi nghe <em>Xẩm Hà Nội</em> của Hà Myo pha Rap và EDM, mình thấy Xẩm bớt cảm giác “nằm trong bảo tàng” đi hẳn.</p>
+              <p class="editable" data-key="pod-s4"><strong class="text-ocean">Nam:</strong> Nhưng mình vẫn hơi băn khoăn một chuyện. Nếu người trẻ chỉ nghe các bản phối hiện đại, liệu có lúc nào mọi người chỉ nhớ phần beat điện tử mà quên mất cái cách nhả chữ, luyến láy của Xẩm cổ không? Như mấy dự án của người trẻ gần đây, kiểu Vọng Phách Kinh Kỳ, họ cũng phải nhắc đi nhắc lại chuyện làm mới nhưng không được làm sai cốt.</p>
+              <p class="editable" data-key="pod-s5"><strong class="text-crimson">Linh:</strong> Mình nghĩ hai thứ đấy không loại trừ nhau đâu. Những bản phối hiện đại hay video ngắn trên mạng giống như “cánh cửa đầu tiên” để người trẻ dừng lại nghe thử. Chứ tự nhiên bảo một bạn 20 tuổi mở ngay băng thu âm cũ 30 phút thì khó lắm. Quan trọng là sau khi mở cửa vào rồi, chúng ta có đủ tư liệu hay, dễ hiểu và có những chiếu Xẩm thật ngoài đời để người ta đi sâu hơn không.</p>
+              <p class="editable" data-key="pod-s6"><strong class="text-ocean">Nam:</strong> Đúng. Như chuyện ở xã Yên Từ, Ninh Bình vẫn mở lớp dạy đàn nhị, trống Xẩm, hay tối cuối tuần vẫn có chiếu Xẩm ngoài phố đi bộ Hà Nội. Tư liệu số hay bản phối mới giúp Xẩm không bị lãng quên, nhưng cuối cùng vẫn phải có người thực sự cầm đàn, gõ phách và kể được câu chuyện của thời đại mình bằng ngôn ngữ của Xẩm.</p>
+              <p class="editable" data-key="pod-s7"><strong class="text-crimson">Linh:</strong> Vậy mới thấy, Xẩm vốn sinh ra từ đời sống thường nhật. Miễn là người hôm nay còn muốn lắng nghe và kể chuyện đời bằng âm nhạc, thì tiếng nhị, nhịp sênh vẫn còn chỗ đứng của nó.</p>
+              <p class="editable text-xs font-bold uppercase tracking-wider text-ocean bg-ocean-pale px-3 py-2 rounded-lg" data-key="pod-s8">[Nhạc kết: Tiếng đàn nhị và sênh tiền nổi lên 5 giây rồi nhỏ dần kết thúc]</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</article>
+
+<div class="max-w-5xl mx-auto px-6 my-4"><div class="chu-cong-horizontal"></div></div>
+
+<!-- ==================== VĨ THANH ==================== -->
+<article id="vi-thanh" class="pt-12 sm:pt-16 pb-12">
+  <div class="max-w-[760px] mx-auto px-5 sm:px-6">
+    <div class="text-center mb-8">
+      <span class="inline-block font-sans text-xs font-bold uppercase tracking-[0.22em] text-crimson px-4 py-1 rounded-full bg-crimson-soft border border-crimson/30 mb-3">Lời kết</span>
+      <h2 class="editable slide-heading text-3xl sm:text-5xl text-ink" data-key="vt-title">
+        VĨ THANH: <span class="text-crimson">GIEO LẠI NHỊP SÊNH GIỮA CHỢ ĐỜI</span>
+      </h2>
+    </div>
+    <div class="article-prose">
+      <p class="editable chapter-drop-cap" data-key="vt-p1">
+        Chiều muộn cuối tuần quanh khu vực phố cổ Hà Nội, khi ánh đèn đường bắt đầu bật sáng, những chiếu Xẩm lại rục rịch chuẩn bị cho buổi diễn tối. Từ tiếng hát mưu sinh trong bóng tối của những nghệ nhân khiếm thị năm xưa đến danh hiệu di sản văn hóa phi vật thể quốc gia tại Ninh Bình và những thử nghiệm âm nhạc đương đại hôm nay, Hát Xẩm đã đi qua một chặng đường dài thay đổi cả không gian lẫn công chúng.
+      </p>
+      <p class="editable" data-key="vt-p2">
+        Công nghệ số có thể lưu giữ giai điệu, sân khấu lớn có thể mang lại ánh đèn, nhưng sức sống bền vững nhất của Xẩm vẫn nằm ở khả năng đối thoại trực tiếp với đời sống thường ngày. Khi còn những lớp học truyền nghề ở quê hương đất tổ, còn những nghệ sĩ kiên trì giữ từng ngón đàn và còn những người trẻ tò mò dừng chân lắng nghe một câu chuyện đời sau nhịp sênh tiền, mạch ngầm của Hát Xẩm sẽ chưa dừng lại.
+      </p>
+    </div>
+  </div>
+
+  <!-- ===== TƯƠNG TÁC 5: THẺ GIEO QUẺ ===== -->
+  <section id="gieo-cau-xam" class="max-w-4xl mx-auto px-4 sm:px-6 mt-14">
+    <div class="rounded-3xl border-2 border-ink bg-gradient-to-br from-crimson-soft/75 via-cream-card to-ocean-pale/85 p-6 sm:p-9 shadow-xl">
+      <div class="text-center max-w-2xl mx-auto mb-7">
+        <span class="inline-block font-sans text-xs font-bold uppercase tracking-widest px-3.5 py-1 rounded-full bg-gradient-to-r from-crimson to-ocean text-cream mb-2">Tương tác 05 • Trải nghiệm kết bài</span>
+        <h3 class="editable slide-heading text-3xl sm:text-4xl text-ink mb-2" data-key="i5-title">GIEO MỘT CÂU XẨM <span class="text-ocean">CHO HÔM NAY</span></h3>
+        <p class="font-sans text-sm text-ink/80">Bấm chọn 1 tâm trạng để lật thẻ nhận cặp lục bát hóm hỉnh mang phong vị <em>Xẩm chợ / Xẩm thập ân</em>.</p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8 font-sans">
+        <button type="button" onclick="pickXamMood('tac-duong')" id="mood-tac-duong" class="mood-btn p-3.5 rounded-2xl border-2 border-ink/25 bg-white hover:bg-crimson hover:text-cream text-ink font-bold text-xs sm:text-sm shadow-sm transition cursor-pointer"><span class="block text-xl mb-1">🚦</span>Tắc đường tan tầm</button>
+        <button type="button" onclick="pickXamMood('deadline')" id="mood-deadline" class="mood-btn p-3.5 rounded-2xl border-2 border-ink/25 bg-white hover:bg-ocean hover:text-cream text-ink font-bold text-xs sm:text-sm shadow-sm transition cursor-pointer"><span class="block text-xl mb-1">💻</span>Chạy deadline xuyên đêm</button>
+        <button type="button" onclick="pickXamMood('com-nha')" id="mood-com-nha" class="mood-btn p-3.5 rounded-2xl border-2 border-ink/25 bg-white hover:bg-crimson hover:text-cream text-ink font-bold text-xs sm:text-sm shadow-sm transition cursor-pointer"><span class="block text-xl mb-1">🍚</span>Nhớ bữa cơm nhà</button>
+        <button type="button" onclick="pickXamMood('pho-thi')" id="mood-pho-thi" class="mood-btn p-3.5 rounded-2xl border-2 border-ink/25 bg-white hover:bg-ocean hover:text-cream text-ink font-bold text-xs sm:text-sm shadow-sm transition cursor-pointer"><span class="block text-xl mb-1">🏙️</span>Chuyện phố thị</button>
+      </div>
+
+      <div class="flip-scene max-w-xl mx-auto">
+        <div id="xam-flip-card" class="flip-card-inner min-h-[300px]">
+          <div class="flip-face absolute inset-0 rounded-3xl border-[6px] border-crimson bg-cream-card p-6 sm:p-8 flex flex-col items-center justify-center text-center shadow-lg slide-checker-ombre">
+            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-crimson to-ocean text-cream flex items-center justify-center text-3xl mb-4 shadow-md border-2 border-ink">🎴</div>
+            <h4 class="slide-heading text-2xl text-ink mb-2">Chiếu Xẩm đang chờ nhịp phách</h4>
+            <p class="font-sans italic text-sm text-ink/75 max-w-sm">Bấm vào một trong 4 tâm trạng phía trên để gieo quẻ lục bát cho ngày hôm nay của bạn.</p>
+          </div>
+
+          <div class="flip-face flip-back rounded-3xl border-[6px] border-crimson bg-cream-card p-6 sm:p-8 shadow-xl relative overflow-hidden min-h-[300px] flex flex-col justify-between">
+            <div class="absolute inset-2.5 rounded-2xl border-2 border-dashed border-ocean/40 pointer-events-none"></div>
+            <div class="relative z-10 text-center">
+              <span id="xam-card-tag" class="inline-block font-sans text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-crimson/15 text-crimson mb-4">🚦 Tắc đường tan tầm • Điệu Xẩm chợ</span>
+              <div class="my-3 px-2">
+                <p id="xam-line-1" class="font-sans italic font-bold text-lg sm:text-2xl text-ink leading-relaxed mb-2">“Chiều về đèn đỏ nối dài,</p>
+                <p id="xam-line-2" class="font-sans italic font-bold text-lg sm:text-2xl text-crimson leading-relaxed">Nhích từng nửa bánh, nghe đài hát rong.”</p>
+              </div>
+              <p class="font-sans text-xs text-ocean font-bold mt-3">— Một chiếu Xẩm • Tiếng Nhị Chợ Đời —</p>
+            </div>
+            <div class="relative z-10 mt-6 pt-4 border-t border-ink/15 flex flex-wrap items-center justify-center gap-2.5 font-sans">
+              <button type="button" onclick="rollAnotherXam()" class="text-xs sm:text-sm font-bold px-4 py-2 rounded-xl bg-ocean hover:bg-ink text-cream transition shadow-sm cursor-pointer">🎲 Gieo câu khác</button>
+              <button type="button" onclick="downloadXamCardImage()" class="text-xs sm:text-sm font-bold px-4 py-2 rounded-xl bg-cream-warm hover:bg-ink hover:text-cream text-ink border-2 border-ink/20 transition cursor-pointer">📸 Tải ảnh thẻ chia sẻ</button>
+            </div>
+            <p class="relative z-10 text-center font-sans text-[11px] text-ink/60 mt-3">Gợi ý: Chụp màn hình thẻ này hoặc bấm “Tải ảnh thẻ chia sẻ” để đăng lên mạng xã hội!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</article>
+</main>
+
+<footer class="relative mt-16 bg-cream border-t-2 border-ink/20 overflow-hidden slide-checker-ombre">
+  <div class="chu-cong-horizontal w-full"></div>
+  <div class="max-w-5xl mx-auto px-5 pt-10 pb-4 text-center relative z-10">
+    <div class="slide-heading text-3xl sm:text-5xl text-ink mb-2">MỘT CHIẾU XẨM <span class="text-crimson">• TIẾNG NHỊ CHỢ ĐỜI</span></div>
+    <p class="editable font-sans text-sm text-ink/85 max-w-xl mx-auto mb-2" data-key="footer-desc">Bài báo longform đa phương tiện: Mạch ngầm của Hát Xẩm từ không gian bóng tối đến phố thị đương đại.</p>
+    <p class="editable font-sans text-xs font-bold text-ocean" data-key="footer-authors">Thực hiện: Nhóm Biên Tập &amp; Sản Xuất Đa Phương Tiện • Hà Nội, 2026</p>
+  </div>
+  <svg viewBox="0 0 1440 96" class="w-full h-auto block" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,96 L0,46 C52,18 110,22 142,54 C186,10 274,12 312,58 C352,26 416,30 450,62 C498,14 588,14 634,60 C680,24 750,24 790,60 C836,12 928,12 974,60 C1020,26 1094,28 1132,62 C1182,12 1272,14 1318,60 C1362,26 1405,24 1440,52 L1440,96 Z" fill="#141414"/>
+    <path d="M0,96 L0,52 C52,24 110,28 142,60 C186,16 274,18 312,64 C352,32 416,36 450,68 C498,20 588,20 634,66 C680,30 750,30 790,66 C836,18 928,18 974,66 C1020,32 1094,34 1132,68 C1182,18 1272,20 1318,66 C1362,32 1405,30 1440,58 L1440,96 Z" fill="url(#ombre-crimson-ocean)"/>
+  </svg>
+</footer>
+
+<!-- Thanh công cụ chỉnh sửa (chỉ chủ trang) -->
+<div id="floating-editor-bar" class="owner-only hidden fixed bottom-4 left-1/2 -translate-x-1/2 z-50 w-[94%] max-w-3xl bg-ink/95 text-cream backdrop-blur-md border-2 border-ocean-light rounded-2xl px-4 py-3 shadow-2xl">
+  <div class="flex flex-wrap items-center justify-between gap-3 font-sans">
+    <div class="flex items-center gap-2">
+      <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+      <span class="text-xs sm:text-sm font-bold">Chế độ chỉnh sửa trực tiếp</span>
+      <span class="hidden sm:inline text-xs text-cream/70">— Bấm vào chữ bất kỳ để gõ sửa</span>
+    </div>
+    <div class="flex flex-wrap items-center gap-2">
+      <button type="button" onclick="saveToLocalStorage()" class="text-xs font-bold px-3.5 py-2 rounded-xl bg-ocean hover:bg-ocean-mid text-white cursor-pointer">💾 Lưu tạm</button>
+      <button type="button" onclick="exportCompleteHTML()" class="text-xs font-bold px-3.5 py-2 rounded-xl bg-crimson hover:bg-crimson-deep text-white cursor-pointer">⬇️ Xuất file HTML hoàn chỉnh</button>
+      <button type="button" onclick="askResetConfirm()" class="text-xs font-bold px-3 py-2 rounded-xl bg-white/15 hover:bg-white/25 text-cream cursor-pointer">↺ Khôi phục gốc</button>
+      <button type="button" onclick="toggleEditorMode(false)" class="text-xs font-bold px-3 py-2 rounded-xl bg-cream text-ink cursor-pointer">✕ Xong</button>
+      <button type="button" onclick="onLockClick()" class="text-xs font-bold px-3 py-2 rounded-xl bg-white/15 hover:bg-white/25 text-cream cursor-pointer">🔒 Khóa lại</button>
+    </div>
+  </div>
+</div>
+
+<!-- Hộp thoại khôi phục -->
+<div id="custom-modal" class="hidden fixed inset-0 z-[60] bg-ink/60 backdrop-blur-sm flex items-center justify-center p-4">
+  <div class="bg-cream-card border-2 border-crimson rounded-3xl max-w-md w-full p-6 shadow-2xl">
+    <h4 class="slide-heading text-2xl text-ink mb-2">Xác nhận khôi phục bản gốc</h4>
+    <p class="font-sans text-sm text-ink/80 leading-relaxed mb-6">Toàn bộ chỉnh sửa tạm thời, ảnh/video đã chèn và link podcast trong trình duyệt sẽ được đưa về mặc định ban đầu.</p>
+    <div class="flex justify-end gap-2.5 font-sans">
+      <button type="button" onclick="closeCustomModal()" class="px-4 py-2 rounded-xl bg-cream-warm text-ink text-sm font-semibold cursor-pointer">Hủy</button>
+      <button type="button" onclick="confirmResetAll()" class="px-4 py-2 rounded-xl bg-crimson text-cream text-sm font-bold cursor-pointer">Đồng ý</button>
+    </div>
+  </div>
+</div>
+
+<!-- Hộp thoại mở khóa -->
+<div id="unlock-modal" class="hidden fixed inset-0 z-[70] bg-ink/60 backdrop-blur-sm flex items-center justify-center p-4">
+  <div class="bg-cream-card border-2 border-ocean rounded-3xl max-w-sm w-full p-6 shadow-2xl">
+    <h4 class="slide-heading text-2xl text-ink mb-2">🔒 Mở khóa chỉnh sửa</h4>
+    <p class="font-sans text-sm text-ink/80 leading-relaxed mb-4">Nhập mật khẩu để bật chế độ sửa nội dung, chèn ảnh/video và nhúng podcast.</p>
+    <input type="password" id="unlock-input" autocomplete="off" placeholder="Mật khẩu"
+      onkeydown="if (event.key === 'Enter') submitUnlock()"
+      class="w-full font-sans text-sm px-3.5 py-2.5 rounded-xl border-2 border-ink/20 bg-white focus:outline-none focus:border-ocean mb-2"/>
+    <p id="unlock-error" class="hidden font-sans text-xs font-semibold text-crimson mb-2">Mật khẩu chưa đúng, thử lại nhé.</p>
+    <div class="flex justify-end gap-2.5 font-sans mt-3">
+      <button type="button" onclick="closeUnlockModal()" class="px-4 py-2 rounded-xl bg-cream-warm text-ink text-sm font-semibold cursor-pointer">Hủy</button>
+      <button type="button" onclick="submitUnlock()" class="px-4 py-2 rounded-xl bg-ocean text-cream text-sm font-bold cursor-pointer">Mở khóa</button>
+    </div>
+  </div>
+</div>
+
+<div id="toast-box" class="fixed top-20 right-4 z-[80] pointer-events-none space-y-2"></div>
+
+<script>
+const STORAGE_KEY = 'hat_xam_longform_v4';
+const UNLOCK_KEY = 'hat_xam_owner_unlocked';
+/* SHA-256 của mật khẩu chỉnh sửa (mặc định: xam2026). Đổi mật khẩu = thay chuỗi này. */
+const PASS_HASH = 'b5a54f9929b30453d2cbdc3d4221dcf6e78abffd6519618de561a9217217c8b2';
+let editorActive = false;
+let ownerUnlocked = false;
+
+let mediaConfig = { hotspotMedia: {}, viewpointMedia: {}, podcastEmbed: '' };
+
+const HOTSPOTS = {
+  1: {
+    badge: 'Điểm chạm 1 / 5',
+    title: 'Đàn Nhị (Đàn Cò)',
+    desc: 'Trục giai điệu linh hồn của canh Xẩm. Bát nhị ống tròn bịt da trăn tạo âm sắc vừa sắc vừa khàn đục đặc trưng; kết hợp cần đàn, dây cữ (cử nhân) và cung vĩ xát nhựa thông giúp mô phỏng sát thanh điệu và ngữ khí giọng nói tiếng Việt.',
+    parts: ['Bát nhị bịt da trăn', 'Cần đàn & 2 trục dây', 'Dây cữ (cử nhân)', 'Cung vĩ xát nhựa thông'],
+    svg: `<svg viewBox="0 0 260 130" class="h-full w-auto"><g filter="url(#hue-diecut)">
+      <line x1="28" y1="64" x2="226" y2="64" stroke="#141414" stroke-width="9" stroke-linecap="round"/>
+      <line x1="28" y1="64" x2="226" y2="64" stroke="#C92A2A" stroke-width="5" stroke-linecap="round"/>
+      <line x1="52" y1="64" x2="52" y2="30" stroke="#141414" stroke-width="4" stroke-linecap="round"/>
+      <line x1="72" y1="64" x2="72" y2="30" stroke="#141414" stroke-width="4" stroke-linecap="round"/>
+      <rect x="184" y="42" width="44" height="44" rx="7" fill="#C92A2A" stroke="#141414" stroke-width="2.5"/>
+      <line x1="52" y1="50" x2="188" y2="56" stroke="#141414" stroke-width="1.5"/>
+      <path d="M104 20 Q162 66 214 112" fill="none" stroke="#1864AB" stroke-width="3.8" stroke-linecap="round"/>
+      <line x1="106" y1="22" x2="212" y2="110" stroke="#FFFDF5" stroke-width="1.8"/>
+    </g></svg>`
+  },
+  2: {
+    badge: 'Điểm chạm 2 / 5',
+    title: 'Sênh Tre & Sênh Tiền',
+    desc: 'Thanh gỗ cứng và phách tre gắn đồng xu kim loại tạo tiếng lách cách giòn giã. Bộ gõ này giữ khung trường canh chắc chắn, giúp nghệ nhân điều tiết nhịp điệu linh hoạt từ chậm rãi sang rộn rã.',
+    parts: ['Thanh gỗ cứng', 'Đồng xu kim loại', 'Tiếng lách cách giòn', 'Giữ khung trường canh'],
+    svg: `<svg viewBox="0 0 260 130" class="h-full w-auto"><g filter="url(#hue-diecut)">
+      <rect x="34" y="30" width="186" height="26" rx="5" transform="rotate(-8 127 43)" fill="#FFFDF5" stroke="#141414" stroke-width="2.5"/>
+      <circle cx="76" cy="48" r="7" fill="#C92A2A" stroke="#141414" stroke-width="2"/>
+      <circle cx="127" cy="41" r="7" fill="#C92A2A" stroke="#141414" stroke-width="2"/>
+      <circle cx="178" cy="34" r="7" fill="#C92A2A" stroke="#141414" stroke-width="2"/>
+      <rect x="44" y="76" width="176" height="22" rx="5" transform="rotate(6 132 87)" fill="#1864AB" stroke="#141414" stroke-width="2.5"/>
+    </g></svg>`
+  },
+  3: {
+    badge: 'Điểm chạm 3 / 5',
+    title: 'Trống Mảnh & Dùi',
+    desc: 'Chiếc trống nhỏ mặt dẹt, đánh bằng que tre mảnh tạo tiếng gọn, sắc. Trống mảnh nhấn phách cực kỳ linh hoạt: khi khoan thai nâng đỡ câu tự sự, lúc dồn dập mô phỏng nhịp bánh tàu điện chạy qua phố.',
+    parts: ['Mặt trống dẹt nhỏ', 'Dùi tre mảnh', 'Tiếng gọn, sắc', 'Nhấn phách & đảo nhịp'],
+    svg: `<svg viewBox="0 0 260 130" class="h-full w-auto"><g filter="url(#hue-diecut)">
+      <ellipse cx="130" cy="78" rx="72" ry="30" fill="#C92A2A" stroke="#141414" stroke-width="2.6"/>
+      <ellipse cx="130" cy="62" rx="72" ry="28" fill="#FFFDF5" stroke="#141414" stroke-width="2.6"/>
+      <line x1="48" y1="22" x2="128" y2="64" stroke="#141414" stroke-width="4.5" stroke-linecap="round"/>
+      <line x1="214" y1="20" x2="134" y2="60" stroke="#141414" stroke-width="4.5" stroke-linecap="round"/>
+    </g></svg>`
+  },
+  4: {
+    badge: 'Điểm chạm 4 / 5',
+    title: 'Đàn Bầu (Độc Huyền Cầm)',
+    desc: 'Chỉ với một dây đàn duy nhất kết hợp kỹ thuật nhấn cần đàn điêu luyện, đàn bầu mở rộng những quãng ngân sâu lắng, tạo khoảng lặng cảm xúc cho các làn điệu buồn như điệu Sa mạc trong bài Anh Khóa.',
+    parts: ['Một dây độc huyền', 'Cần đàn uốn dẻo', 'Bầu cộng hưởng', 'Quãng ngân sâu lắng'],
+    svg: `<svg viewBox="0 0 260 130" class="h-full w-auto"><g filter="url(#hue-diecut)">
+      <rect x="44" y="80" width="186" height="26" rx="5" fill="#C92A2A" stroke="#141414" stroke-width="2.6"/>
+      <path d="M56 80 Q40 34 66 16" fill="none" stroke="#141414" stroke-width="4.5" stroke-linecap="round"/>
+      <path d="M50 46 C32 38 34 72 51 64 C66 66 68 42 50 46 Z" fill="#1971C2" stroke="#141414" stroke-width="2.4"/>
+      <line x1="64" y1="20" x2="216" y2="80" stroke="#141414" stroke-width="2"/>
+    </g></svg>`
+  },
+  5: {
+    badge: 'Điểm chạm 5 / 5',
+    title: 'Chiếu Hoa Cạp Điều & Trang Phục',
+    desc: 'Tấm chiếu cói cạp đỏ là “sân khấu di động” trải thẳng xuống nền đất, gốc đa hay hè phố. Cùng áo dài the, khăn xếp, áo tứ thân, khăn mỏ quạ và chiếc nón lá đặt góc chiếu nhận lòng tri âm, toàn bộ gánh Xẩm có thể cuộn chiếu di chuyển bất cứ đâu.',
+    parts: ['Chiếu hoa cạp điều đỏ', 'Áo dài the & khăn xếp', 'Áo tứ thân & khăn mỏ quạ', 'Nón lá góc chiếu'],
+    svg: `<svg viewBox="0 0 260 130" class="h-full w-auto"><g filter="url(#hue-diecut)">
+      <polygon points="24,106 236,106 208,48 52,48" fill="#FBF5E6" stroke="#C92A2A" stroke-width="8"/>
+      <path d="M90 66 L130 22 L170 66 Z" fill="#FFFDF5" stroke="#141414" stroke-width="2.4"/>
+      <ellipse cx="130" cy="68" rx="44" ry="14" fill="#FBF5E6" stroke="#141414" stroke-width="2.4"/>
+    </g></svg>`
+  }
+};
+let currentHotspotId = 1;
+
+const XAM_VERSES = {
+  'tac-duong': { label: '🚦 Tắc đường tan tầm • Điệu Xẩm chợ', items: [
+    ['Chiều về đèn đỏ nối dài,', 'Nhích từng nửa bánh, nghe đài hát rong.'],
+    ['Năm giờ tan sở mênh mông,', 'Xe chen như nêm cối, lòng mong cơm nhà.'],
+    ['Ngã tư kẹt cứng gần xa,', 'Thôi thì gõ nhịp sênh ca đỡ buồn.'],
+    ['Còi xe inh ỏi từng luồng,', 'Bình tâm một nhịp, tan luôn nhọc nhằn.']
+  ]},
+  'deadline': { label: '💻 Chạy deadline xuyên đêm • Điệu Xẩm tàu điện', items: [
+    ['Nửa đêm màn sáng chong đèn,', 'Cà phê hai cốc, gõ rền phím kêu.'],
+    ['Việc chồng như núi sớm chiều,', 'Thở sâu một nhịp, đánh liều vượt qua.'],
+    ['Trống mảnh giục giã gần xa,', 'Sếp giao việc gấp, ta ra chiêu liền.'],
+    ['Thức khuya mắt đã thâm viền,', 'Xong bài nộp sớm, ngủ yên tới trưa.']
+  ]},
+  'com-nha': { label: '🍚 Nhớ bữa cơm nhà • Điệu Xẩm thập ân', items: [
+    ['Đi xa trăm phố ngàn phường,', 'Bát canh cà pháo mẹ thương nhất đời.'],
+    ['Chiều mưa khói bếp đâu đây,', 'Nhớ mâm cơm nóng đủ đầy tiếng cười.'],
+    ['Phố đông đèn điện sáng ngời,', 'Không bằng tiếng mẹ gọi mời ăn cơm.'],
+    ['Công cha nghĩa mẹ vuông tròn,', 'Bữa cơm sum họp mãi còn trong tim.']
+  ]},
+  'pho-thi': { label: '🏙️ Chuyện phố thị • Điệu Mục hạ vô nhân', items: [
+    ['Phố phường tấp nập người qua,', 'Dừng chân nghe tiếng nhị già kể chơi.'],
+    ['Đèn xanh đèn đỏ sáng trời,', 'Chiếu hoa cạp đỏ giữa đời vẫn ngân.'],
+    ['Mạng kia trăm chuyện xoay vần,', 'Bằng sao câu Xẩm ân cần sẻ chia.'],
+    ['Hồ Gươm lộng gió đêm khuya,', 'Nhịp sênh giòn giã gọi về hồn xưa.']
+  ]}
+};
+let currentMood = 'tac-duong';
+let currentVerseIdx = 0;
+
+/* ================= KHÓA / MỞ KHÓA QUYỀN CHỈNH SỬA ================= */
+async function sha256Hex(text) {
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(text));
+  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+function applyLockState() {
+  document.body.classList.toggle('owner-unlocked', ownerUnlocked);
+  document.getElementById('lock-icon').textContent = ownerUnlocked ? '🔓' : '🔒';
+  document.getElementById('lock-label').textContent = ownerUnlocked ? 'Khóa lại' : 'Mở khóa';
+}
+
+function onLockClick() {
+  if (ownerUnlocked) {
+    if (editorActive) toggleEditorMode(false);
+    ownerUnlocked = false;
+    try { sessionStorage.removeItem(UNLOCK_KEY); } catch (e) {}
+    applyLockState();
+    showToast('🔒 Đã khóa chỉnh sửa. Người xem chỉ đọc được nội dung.', 'info');
+  } else {
+    document.getElementById('unlock-error').classList.add('hidden');
+    document.getElementById('unlock-input').value = '';
+    document.getElementById('unlock-modal').classList.remove('hidden');
+    setTimeout(() => document.getElementById('unlock-input').focus(), 50);
+  }
+}
+
+function closeUnlockModal() { document.getElementById('unlock-modal').classList.add('hidden'); }
+
+async function submitUnlock() {
+  const val = document.getElementById('unlock-input').value;
+  if (!val) return;
+  try {
+    const h = await sha256Hex(val);
+    if (h === PASS_HASH) {
+      ownerUnlocked = true;
+      try { sessionStorage.setItem(UNLOCK_KEY, '1'); } catch (e) {}
+      closeUnlockModal();
+      applyLockState();
+      showToast('🔓 Đã mở khóa! Bấm “Chỉnh sửa trực tiếp” để sửa nội dung.');
+    } else {
+      document.getElementById('unlock-error').classList.remove('hidden');
+    }
+  } catch (e) {
+    showToast('Trình duyệt không hỗ trợ kiểm tra mật khẩu.', 'info');
+  }
+}
+
+/* ================= TƯƠNG TÁC ================= */
+function selectTimeline(index) {
+  [0, 1, 2].forEach(i => {
+    const tab = document.getElementById('tl-tab-' + i);
+    const panel = document.getElementById('tl-panel-' + i);
+    if (i === index) {
+      tab.className = 'tl-tab text-left p-4 rounded-2xl border-2 border-ink bg-crimson text-cream shadow-md transition cursor-pointer';
+      tab.querySelector('div').className = 'font-sans text-xs font-bold uppercase opacity-90';
+      panel.classList.remove('hidden');
+    } else {
+      tab.className = 'tl-tab text-left p-4 rounded-2xl border-2 border-ink/20 bg-white text-ink hover:border-ocean transition cursor-pointer';
+      tab.querySelector('div').className = 'font-sans text-xs font-bold uppercase text-ocean';
+      panel.classList.add('hidden');
+    }
+  });
+}
+
+function selectHotspot(id) {
+  currentHotspotId = id;
+  const data = HOTSPOTS[id];
+  if (!data) return;
+
+  [1, 2, 3, 4, 5].forEach(n => {
+    const el = document.getElementById('hs-' + n);
+    if (el) el.classList.toggle('is-selected', n === id);
+    const pill = document.getElementById('hs-pill-' + n);
+    if (pill) {
+      pill.className = n === id
+        ? 'hs-pill px-3 py-1.5 rounded-xl text-xs font-bold bg-ocean text-cream cursor-pointer'
+        : 'hs-pill px-3 py-1.5 rounded-xl text-xs font-bold bg-cream-warm text-ink hover:bg-ocean/15 cursor-pointer';
+    }
+  });
+
+  document.getElementById('hs-badge').textContent = data.badge;
+  document.getElementById('hs-svg-box').innerHTML = data.svg;
+  document.getElementById('hs-title').textContent = data.title;
+  document.getElementById('hs-desc').textContent = data.desc;
+  document.getElementById('hs-parts').innerHTML = data.parts
+    .map(p => `<span class="font-sans text-xs font-bold px-3 py-1 rounded-lg bg-cream-warm text-ink border border-ink/15">${p.replace(/&/g, '&amp;')}</span>`)
+    .join('');
+
+  renderHotspotCustomMedia(id);
+  document.getElementById('hs-media-form').classList.add('hidden');
+}
+
+function renderHotspotCustomMedia(id) {
+  const display = document.getElementById('hs-custom-media-display');
+  const svgBox = document.getElementById('hs-svg-box');
+  const url = mediaConfig.hotspotMedia[id];
+
+  if (!url) {
+    display.classList.add('hidden');
+    display.innerHTML = '';
+    svgBox.classList.remove('hidden');
+    return;
+  }
+
+  const ytMatch = url.match(/(?:youtube\.com\/(?:watch\?v=|shorts\/|embed\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
+  if (ytMatch) {
+    display.innerHTML = `<iframe class="w-full h-full" src="https://www.youtube.com/embed/${ytMatch[1]}" frameborder="0" allowfullscreen></iframe>`;
+  } else if (/\.(mp4|webm|ogg)(\?.*)?$/i.test(url) || url.startsWith('blob:video')) {
+    display.innerHTML = `<video controls class="w-full h-full object-contain bg-black" src="${url}"></video>`;
+  } else {
+    display.innerHTML = `<img src="${url}" alt="Cận cảnh ${HOTSPOTS[id].title}" class="w-full h-full object-cover" onerror="this.alt='Không tải được ảnh'"/>`;
+  }
+  display.classList.remove('hidden');
+  svgBox.classList.add('hidden');
+}
+
+function toggleHotspotMediaForm() {
+  const f = document.getElementById('hs-media-form');
+  f.classList.toggle('hidden');
+  document.getElementById('hs-media-url-input').value = mediaConfig.hotspotMedia[currentHotspotId] || '';
+}
+
+function saveHotspotMediaUrl() {
+  const val = document.getElementById('hs-media-url-input').value.trim();
+  if (!val) return showToast('Vui lòng dán đường dẫn ảnh hoặc video.', 'info');
+  mediaConfig.hotspotMedia[currentHotspotId] = val;
+  renderHotspotCustomMedia(currentHotspotId);
+  document.getElementById('hs-media-form').classList.add('hidden');
+  saveToLocalStorage(true);
+  showToast('Đã chèn ảnh/video cho ' + HOTSPOTS[currentHotspotId].title);
+}
+
+function handleHotspotLocalFile(e) {
+  const file = e.target.files[0];
+  if (!file) return;
+  const objUrl = URL.createObjectURL(file);
+  const display = document.getElementById('hs-custom-media-display');
+  const svgBox = document.getElementById('hs-svg-box');
+  if (file.type.startsWith('video/')) {
+    display.innerHTML = `<video controls class="w-full h-full object-contain bg-black" src="${objUrl}"></video>`;
+  } else {
+    display.innerHTML = `<img src="${objUrl}" alt="Cận cảnh dụng cụ" class="w-full h-full object-cover"/>`;
+  }
+  display.classList.remove('hidden');
+  svgBox.classList.add('hidden');
+  showToast('Đã tải file cận cảnh cho ' + HOTSPOTS[currentHotspotId].title);
+}
+
+function clearHotspotMedia() {
+  delete mediaConfig.hotspotMedia[currentHotspotId];
+  renderHotspotCustomMedia(currentHotspotId);
+  document.getElementById('hs-media-form').classList.add('hidden');
+  saveToLocalStorage(true);
+  showToast('Đã trả về hình minh họa vector.');
+}
+
+function toggleViewpointForm(num) {
+  const f = document.getElementById(`vp${num}-form`);
+  f.classList.toggle('hidden');
+  document.getElementById(`vp${num}-input`).value = mediaConfig.viewpointMedia[num] || '';
+}
+
+function renderViewpointMedia(num, url) {
+  const mount = document.getElementById(`vp${num}-media-mount`);
+  if (!mount || !url) return;
+  const ytMatch = url.match(/(?:youtube\.com\/(?:watch\?v=|shorts\/|embed\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
+  mount.className = 'aspect-video w-full bg-black overflow-hidden';
+  if (ytMatch) {
+    mount.innerHTML = `<iframe class="w-full h-full" src="https://www.youtube.com/embed/${ytMatch[1]}" frameborder="0" allowfullscreen></iframe>`;
+  } else if (/\.(mp4|webm|ogg)(\?.*)?$/i.test(url) || url.startsWith('blob:video')) {
+    mount.innerHTML = `<video controls class="w-full h-full object-contain bg-black" src="${url}"></video>`;
+  } else {
+    mount.innerHTML = `<img src="${url}" alt="Tư liệu Góc nhìn ${num}" class="w-full h-full object-cover"/>`;
+  }
+}
+
+function applyViewpointUrl(num) {
+  const val = document.getElementById(`vp${num}-input`).value.trim();
+  if (!val) return showToast('Vui lòng dán đường dẫn ảnh hoặc video.', 'info');
+  mediaConfig.viewpointMedia[num] = val;
+  renderViewpointMedia(num, val);
+  document.getElementById(`vp${num}-form`).classList.add('hidden');
+  saveToLocalStorage(true);
+  showToast(`Đã chèn ảnh/video cho Góc nhìn ${num}!`);
+}
+
+function handleViewpointFile(num, e) {
+  const file = e.target.files[0];
+  if (!file) return;
+  const objUrl = URL.createObjectURL(file);
+  const mount = document.getElementById(`vp${num}-media-mount`);
+  mount.className = 'aspect-video w-full bg-black overflow-hidden';
+  if (file.type.startsWith('video/')) {
+    mount.innerHTML = `<video controls class="w-full h-full object-contain bg-black" src="${objUrl}"></video>`;
+  } else {
+    mount.innerHTML = `<img src="${objUrl}" alt="Tư liệu Góc nhìn ${num}" class="w-full h-full object-cover"/>`;
+  }
+  showToast(`Đã tải file minh họa cho Góc nhìn ${num}!`);
+}
+
+function togglePodcastEmbedForm(forceShow = false) {
+  const form = document.getElementById('podcast-embed-form');
+  if (forceShow) form.classList.remove('hidden');
+  else form.classList.toggle('hidden');
+  document.getElementById('podcast-input').value = mediaConfig.podcastEmbed || '';
+}
+
+function renderPodcastEmbed(rawInput, labelText) {
+  const placeholder = document.getElementById('podcast-placeholder');
+  const activeBox = document.getElementById('podcast-active-player');
+  const mount = document.getElementById('podcast-player-mount');
+  const label = document.getElementById('podcast-source-label');
+
+  if (!rawInput) {
+    placeholder.classList.remove('hidden');
+    activeBox.classList.add('hidden');
+    mount.innerHTML = '';
+    return;
+  }
+
+  const trimmed = rawInput.trim();
+  let html = '';
+  if (trimmed.startsWith('<iframe')) {
+    html = `<div class="rounded-xl overflow-hidden">${trimmed}</div>`;
+  } else if (trimmed.includes('open.spotify.com')) {
+    const embedUrl = trimmed.replace('open.spotify.com/', 'open.spotify.com/embed/').split('?')[0];
+    html = `<iframe style="border-radius:12px" src="${embedUrl}" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>`;
+  } else if (trimmed.includes('soundcloud.com')) {
+    const enc = encodeURIComponent(trimmed);
+    html = `<iframe width="100%" height="150" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=${enc}&color=%23C92A2A&auto_play=false"></iframe>`;
+  } else {
+    html = `<audio controls class="w-full rounded-xl" src="${trimmed}"></audio>`;
+  }
+
+  mount.innerHTML = html;
+  label.textContent = labelText || ('Nguồn đã nhúng: ' + trimmed.slice(0, 60));
+  placeholder.classList.add('hidden');
+  activeBox.classList.remove('hidden');
+  document.getElementById('podcast-embed-form').classList.add('hidden');
+}
+
+function applyPodcastEmbed() {
+  const val = document.getElementById('podcast-input').value.trim();
+  if (!val) return showToast('Vui lòng dán link Podcast hoặc mã iframe.', 'info');
+  mediaConfig.podcastEmbed = val;
+  renderPodcastEmbed(val);
+  saveToLocalStorage(true);
+  showToast('Đã nhúng Podcast thành công!');
+}
+
+function handleLocalPodcastUpload(e) {
+  const file = e.target.files[0];
+  if (!file) return;
+  renderPodcastEmbed(URL.createObjectURL(file), 'File từ máy: ' + file.name);
+  showToast('Đã tải file Podcast từ máy tính!');
+}
+
+function clearPodcastEmbed() {
+  mediaConfig.podcastEmbed = '';
+  renderPodcastEmbed('');
+  saveToLocalStorage(true);
+}
+
+function toggleTranscript() {
+  const box = document.getElementById('podcast-transcript');
+  const chev = document.getElementById('transcript-chevron');
+  box.classList.toggle('hidden');
+  chev.style.transform = box.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+}
+
+function pickXamMood(moodKey) {
+  currentMood = moodKey;
+  const pool = XAM_VERSES[moodKey];
+  currentVerseIdx = Math.floor(Math.random() * pool.items.length);
+
+  document.querySelectorAll('.mood-btn').forEach(btn => {
+    btn.classList.remove('bg-crimson', 'bg-ocean', 'text-cream', 'ring-2', 'ring-ink');
+    btn.classList.add('bg-white', 'text-ink');
+  });
+  const activeBtn = document.getElementById('mood-' + moodKey);
+  if (activeBtn) {
+    activeBtn.classList.remove('bg-white', 'text-ink');
+    activeBtn.classList.add(moodKey === 'deadline' || moodKey === 'pho-thi' ? 'bg-ocean' : 'bg-crimson', 'text-cream', 'ring-2', 'ring-ink');
+  }
+
+  updateXamCardContent();
+  document.getElementById('xam-flip-card').classList.add('is-flipped');
+}
+
+function rollAnotherXam() {
+  const pool = XAM_VERSES[currentMood];
+  currentVerseIdx = (currentVerseIdx + 1) % pool.items.length;
+  const card = document.getElementById('xam-flip-card');
+  card.classList.remove('is-flipped');
+  setTimeout(() => {
+    updateXamCardContent();
+    card.classList.add('is-flipped');
+  }, 260);
+}
+
+function updateXamCardContent() {
+  const pool = XAM_VERSES[currentMood];
+  const pair = pool.items[currentVerseIdx];
+  document.getElementById('xam-card-tag').textContent = pool.label;
+  document.getElementById('xam-line-1').textContent = '“' + pair[0];
+  document.getElementById('xam-line-2').textContent = pair[1] + '”';
+}
+
+function downloadXamCardImage() {
+  const pool = XAM_VERSES[currentMood];
+  const pair = pool.items[currentVerseIdx];
+  const canvas = document.createElement('canvas');
+  canvas.width = 960;
+  canvas.height = 1200;
+  const ctx = canvas.getContext('2d');
+
+  const grad = ctx.createLinearGradient(0, 0, 960, 1200);
+  grad.addColorStop(0, '#FDECEC');
+  grad.addColorStop(0.5, '#FFFDF5');
+  grad.addColorStop(1, '#E7F5FF');
+  ctx.fillStyle = grad;
+  ctx.fillRect(0, 0, 960, 1200);
+
+  ctx.strokeStyle = '#C92A2A';
+  ctx.lineWidth = 28;
+  ctx.strokeRect(42, 42, 876, 1116);
+
+  ctx.strokeStyle = '#1864AB';
+  ctx.lineWidth = 4;
+  ctx.setLineDash([14, 10]);
+  ctx.strokeRect(76, 76, 808, 1048);
+  ctx.setLineDash([]);
+
+  ctx.fillStyle = '#1864AB';
+  ctx.font = 'bold 26px "Montserrat", sans-serif';
+  ctx.textAlign = 'center';
+  ctx.fillText('MỘT CHIẾU XẨM • TIẾNG NHỊ CHỢ ĐỜI', 480, 165);
+
+  ctx.fillStyle = '#C92A2A';
+  ctx.font = 'bold 34px "Oswald", sans-serif';
+  ctx.fillText(pool.label.toUpperCase(), 480, 260);
+
+  ctx.fillStyle = '#141414';
+  ctx.font = 'italic bold 42px "Montserrat", sans-serif';
+  ctx.fillText('“' + pair[0], 480, 560);
+  ctx.fillStyle = '#C92A2A';
+  ctx.fillText(pair[1] + '”', 480, 645);
+
+  ctx.fillStyle = '#141414';
+  ctx.font = '600 24px "Montserrat", sans-serif';
+  ctx.fillText('Gieo một câu Xẩm cho hôm nay', 480, 985);
+
+  const link = document.createElement('a');
+  link.download = 'cau-xam-hom-nay.png';
+  link.href = canvas.toDataURL('image/png');
+  link.click();
+  showToast('📸 Đã tải ảnh thẻ câu Xẩm về máy!');
+}
+
+/* ================= CHẾ ĐỘ CHỈNH SỬA (chỉ khi đã mở khóa) ================= */
+function toggleEditorMode(forceState) {
+  if (!ownerUnlocked) return;
+  editorActive = typeof forceState === 'boolean' ? forceState : !editorActive;
+  document.body.classList.toggle('editor-active', editorActive);
+
+  document.querySelectorAll('.editable').forEach(el => {
+    el.setAttribute('contenteditable', editorActive ? 'true' : 'false');
+  });
+
+  const bar = document.getElementById('floating-editor-bar');
+  const btn = document.getElementById('toggle-editor-btn');
+  const lbl = document.getElementById('editor-btn-label');
+
+  if (editorActive) {
+    bar.classList.remove('hidden');
+    btn.classList.remove('bg-ocean-pale/80', 'text-ocean');
+    btn.classList.add('bg-ocean', 'text-white');
+    lbl.textContent = 'Đang chỉnh sửa';
+    showToast('✏️ Đã bật Chỉnh sửa trực tiếp! Bấm vào bất kỳ chữ nào để sửa.');
+  } else {
+    bar.classList.add('hidden');
+    btn.classList.add('bg-ocean-pale/80', 'text-ocean');
+    btn.classList.remove('bg-ocean', 'text-white');
+    lbl.textContent = 'Chỉnh sửa trực tiếp';
+    document.querySelectorAll('.editable').forEach(el => el.removeAttribute('contenteditable'));
+    saveToLocalStorage(true);
+  }
+}
+
+function saveToLocalStorage(silent = false) {
+  try {
+    const texts = {};
+    document.querySelectorAll('.editable[data-key]').forEach(el => {
+      texts[el.getAttribute('data-key')] = el.innerHTML;
+    });
+    localStorage.setItem(STORAGE_KEY, JSON.stringify({ texts, mediaConfig }));
+    if (!silent) showToast('💾 Đã lưu nội dung & media vào trình duyệt!');
+  } catch (e) {}
+}
+
+function loadSavedState() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) return;
+    const parsed = JSON.parse(raw);
+    if (parsed.texts) {
+      Object.keys(parsed.texts).forEach(key => {
+        const el = document.querySelector(`.editable[data-key="${key}"]`);
+        if (el) el.innerHTML = parsed.texts[key];
+      });
+    }
+    if (parsed.mediaConfig) {
+      mediaConfig = Object.assign(mediaConfig, parsed.mediaConfig);
+      Object.keys(mediaConfig.viewpointMedia || {}).forEach(num => {
+        renderViewpointMedia(num, mediaConfig.viewpointMedia[num]);
+      });
+      if (mediaConfig.podcastEmbed) renderPodcastEmbed(mediaConfig.podcastEmbed);
+    }
+  } catch (e) {}
+}
+
+function exportCompleteHTML() {
+  if (!ownerUnlocked) return;
+  saveToLocalStorage(true);
+  const wasEditing = editorActive;
+  if (wasEditing) {
+    document.body.classList.remove('editor-active');
+    document.querySelectorAll('.editable').forEach(el => el.removeAttribute('contenteditable'));
+    document.getElementById('floating-editor-bar').classList.add('hidden');
+  }
+
+  const cloneDoc = document.documentElement.cloneNode(true);
+  /* File xuất ra luôn ở trạng thái KHÓA */
+  cloneDoc.querySelector('body').classList.remove('owner-unlocked', 'editor-active');
+  const oldScript = cloneDoc.querySelector('#exported-media-config');
+  if (oldScript) oldScript.remove();
+
+  const cfgScript = document.createElement('script');
+  cfgScript.id = 'exported-media-config';
+  cfgScript.textContent = `window.__EXPORTED_MEDIA_CONFIG__ = ${JSON.stringify(mediaConfig)};`;
+  cloneDoc.querySelector('head').appendChild(cfgScript);
+
+  const blob = new Blob(['<!DOCTYPE html>\n' + cloneDoc.outerHTML], { type: 'text/html;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'tieng-nhi-cho-doi-hat-xam.html';
+  a.click();
+  setTimeout(() => URL.revokeObjectURL(url), 2000);
+
+  if (wasEditing) {
+    document.body.classList.add('editor-active');
+    document.querySelectorAll('.editable').forEach(el => el.setAttribute('contenteditable', 'true'));
+    document.getElementById('floating-editor-bar').classList.remove('hidden');
+  }
+  showToast('⬇️ Đã xuất file HTML hoàn chỉnh!');
+}
+
+function askResetConfirm() { document.getElementById('custom-modal').classList.remove('hidden'); }
+function closeCustomModal() { document.getElementById('custom-modal').classList.add('hidden'); }
+function confirmResetAll() {
+  try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
+  closeCustomModal();
+  window.location.reload();
+}
+
+function toggleMobileMenu(force) {
+  const m = document.getElementById('mobile-menu');
+  if (typeof force === 'boolean') m.classList.toggle('hidden', !force);
+  else m.classList.toggle('hidden');
+}
+
+function showToast(msg, type = 'success') {
+  const box = document.getElementById('toast-box');
+  const el = document.createElement('div');
+  el.className = `pointer-events-auto font-sans text-xs sm:text-sm font-semibold px-4 py-3 rounded-xl shadow-lg border-2 ${
+    type === 'info' ? 'bg-ocean text-cream border-white/30' : 'bg-ink text-cream border-crimson'
+  }`;
+  el.textContent = msg;
+  box.appendChild(el);
+  setTimeout(() => {
+    el.style.opacity = '0';
+    setTimeout(() => el.remove(), 300);
+  }, 3000);
+}
+
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+  const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const pct = docHeight > 0 ? Math.min(100, Math.max(0, (scrollTop / docHeight) * 100)) : 0;
+  document.getElementById('reading-progress').style.width = pct + '%';
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+  try { ownerUnlocked = sessionStorage.getItem(UNLOCK_KEY) === '1'; } catch (e) { ownerUnlocked = false; }
+  applyLockState();
+
+  if (window.__EXPORTED_MEDIA_CONFIG__) {
+    mediaConfig = Object.assign(mediaConfig, window.__EXPORTED_MEDIA_CONFIG__);
+    Object.keys(mediaConfig.viewpointMedia || {}).forEach(num => renderViewpointMedia(num, mediaConfig.viewpointMedia[num]));
+    if (mediaConfig.podcastEmbed) renderPodcastEmbed(mediaConfig.podcastEmbed);
+  }
+  loadSavedState();
+  selectTimeline(0);
+  selectHotspot(1);
+});
+</script>
+</body>
+</html>
